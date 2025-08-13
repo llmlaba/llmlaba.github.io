@@ -1,5 +1,5 @@
-<div class="gallery-wrapper" style="margin: 0 auto; max-width: 960px; padding: 20px;">
-  <div class="gallery-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;">
+<div class="gallery-wrap">
+  <div class="gallery-grid">
     {% for img in include.images %}
       <a href="{{ img | relative_url }}" class="glightbox" data-gallery="{{ include.gallery_id | default: 'gallery1' }}">
         <img src="{{ img | relative_url }}" alt="photo" loading="lazy">
