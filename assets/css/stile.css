@@ -1,7 +1,7 @@
 .gallery-grid {
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 260px)); /* было 1fr */
+  grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); /* сетка с адаптивными колонками */
   justify-content: center;  /* центрируем сетку, когда есть «воздух» справа/слева */
 }
 
