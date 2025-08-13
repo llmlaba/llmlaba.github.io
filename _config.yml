@@ -1,2 +1,10 @@
 theme: jekyll-theme-slate
-title: [Dmitrii Kostakov]
+title: [LLM Laboratory]
+description: [Home Large Language Models research laboratory]
+
+collections:
+  articles:
+    output: true
+
+plugins:
+  - jekyll-sitemap
