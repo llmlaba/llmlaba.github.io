@@ -2,6 +2,7 @@
 layout: default
 title: "NVIDIA Tesla M10 GPU"
 date: 2025-08-12
+categories: [gpu, hardware]
 
 images:
   - /assets/articles/nvidia-tesla-m10/1.JPG
