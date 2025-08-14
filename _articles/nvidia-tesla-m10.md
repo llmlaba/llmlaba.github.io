@@ -5,9 +5,9 @@ date: 2025-08-12
 categories: [gpu, hardware]
 
 images:
-  - /assets/articles/nvidia-tesla-m10/1.JPG
-  - /assets/articles/nvidia-tesla-m10/2.JPG
-  - /assets/articles/nvidia-tesla-m10/3.JPG
+  - /assets/articles/nvidia-tesla-m10/1.jpg
+  - /assets/articles/nvidia-tesla-m10/2.jpg
+  - /assets/articles/nvidia-tesla-m10/3.jpg
 ---
 
 # NVIDIA Tesla M10 GPU 
