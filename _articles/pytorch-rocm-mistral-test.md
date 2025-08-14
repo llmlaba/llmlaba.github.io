@@ -20,7 +20,7 @@ images:
 
 ## Steps
 
-### Get the most popular LLM Mistral
+### Get the Mistral
 ```bash
 git lfs install
 git clone https://huggingface.co/mistralai/Mistral-7B-v0.1 mistral
