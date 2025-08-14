@@ -4,7 +4,10 @@ title: "Main page"
 ---
 
 # Articles
-Occasionally, I write about LLM AI technologies that interest me on this blog.  
+- Occasionally, I write about LLM AI technologies that interest me on this blog.
+- If you want to begin your learning journey about LLM AI, this blog will be very helpful for you.
+
+## General
 
 ## GPU
 {% for article in site.articles %}
