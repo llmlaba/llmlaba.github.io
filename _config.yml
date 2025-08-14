@@ -1,6 +1,7 @@
 theme: jekyll-theme-slate
 title: [LLM Laboratory]
 description: [Home Large Language Models research laboratory]
+owner: [Dmitrii Kostakov]
 
 collections:
   articles:
