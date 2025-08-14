@@ -9,6 +9,12 @@ title: "Main page"
 
 ## General
 
+{% for article in site.articles %}
+  {% if article.categories contains "general" %}
+- [{{ article.title }}]({{ article.url | relative_url }}) — {{ article.date | date: "%d.%m.%Y" }}
+  {% endif %}
+{% endfor %}
+
 ## GPU
 {% for article in site.articles %}
   {% if article.categories contains "gpu" %}

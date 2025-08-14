@@ -16,10 +16,10 @@ images:
 
 ## Hot links
 > if not exist check archive.org
-- https://www.amd.com/en/support/downloads/drivers.html/accelerators/instinct/instinct-mi-series/instinct-mi50-32gb.html
-- https://amdgpu-install.readthedocs.io/en/latest/install-prereq.html#installing-the-installer-package
-- https://amdgpu-install.readthedocs.io/en/latest/install-script.html
-- https://amdgpu-install.readthedocs.io/en/latest/install-installing.html#installing-the-all-open-use-case
+- [Download driver](https://www.amd.com/en/support/downloads/drivers.html/accelerators/instinct/instinct-mi-series/instinct-mi50-32gb.html)
+- [Install installer](https://amdgpu-install.readthedocs.io/en/latest/install-prereq.html#installing-the-installer-package)
+- [Install driver option 1](https://amdgpu-install.readthedocs.io/en/latest/install-script.html)
+- [Install driver option 2](https://amdgpu-install.readthedocs.io/en/latest/install-installing.html#installing-the-all-open-use-case)
 
 ## Limitations
 - Linux only, there is no driver for windows
