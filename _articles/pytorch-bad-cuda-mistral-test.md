@@ -5,7 +5,7 @@ date: 2025-06-14
 categories: [llm, software]
 ---
 
-# Mistral 7b ROCm PyTorch Test 
+# Mistral 7b Bad CUDA PyTorch Test 
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
@@ -25,7 +25,7 @@ categories: [llm, software]
 git lfs install
 git clone https://huggingface.co/mistralai/Mistral-7B-v0.1 mistral
 ```
-### Preapre python environment for ROCm:
+### Preapre python environment for CUDA:
 ```bash
 python -m venv .venv_llm_mistral
 .\.venv_llm_mistral\Scripts\Activate.ps1
@@ -34,7 +34,7 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 pip install transformers accelerate
 python .\test_cuda_mistral.py
 ```
-### Create script test_rocm_mistral.py:
+### Create script test_cuda_mistral.py:
 ```python
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 import torch

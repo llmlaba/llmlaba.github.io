@@ -8,7 +8,7 @@ images:
   - /assets/articles/pytorch-bad-cuda-sd1-5-test/1.jpg
 ---
 
-# Stable Diffusion v1.5 ROCm PyTorch Test 
+# Stable Diffusion v1.5 Bad CUDA PyTorch Test 
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
@@ -28,16 +28,16 @@ images:
 git lfs install
 git clone https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5 sd1.5
 ```
-### Preapre python environment for ROCm:
+### Preapre python environment for CUDA:
 ```bash
 python -m venv .venv_llm_sd1.5
 .\.venv_llm_sd1.5\Scripts\Activate.ps1
 python -m pip install --upgrade pip
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
 pip install transformers accelerate diffusers safetensors
-python .\test_rocm_sd1.5.py
+python .\test_cuda_sd1.5.py
 ```
-### Create script test_rocm_sd1.5.py:
+### Create script test_cuda_sd1.5.py:
 ```python
 from diffusers import StableDiffusionPipeline
 import torch
