@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "llama.cpp - run LLM everywhere"
-date: 2025-08-13
+date: 2025-08-10
 categories: [software, llm]
 
 images:

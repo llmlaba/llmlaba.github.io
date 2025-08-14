@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "NVIDIA Tesla K80 GPU"
-date: 2025-08-13
+date: 2025-08-02
 categories: [gpu, hardware]
 
 images:
