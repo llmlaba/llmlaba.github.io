@@ -9,7 +9,7 @@ categories: [general]
 > ...
 
 ## Hugging Face
-There is only one reliable hub and commuinty for llm models - https://huggingface.co  
+There is only one reliable hub and commuinty for llm models - [Hugging Face](https://huggingface.co)  
 It makes sense to create an account there as soon as you start working with LLMs.  
 It is also helpful to have external storage for LLMs, as each model may require several dozen GB of disk space. Make sure you have sufficient storage.
 
@@ -27,6 +27,6 @@ It is also helpful to have external storage for LLMs, as each model may require 
 - ROCm - AMD GPU API to use gpu for different calculations
 
 ## Hardware
-> In order to work with LLM you need a very powerful GPU, I recommend a minimum of 32GB
+In order to work with LLM you need a very powerful GPU, I recommend a minimum of 32GB.  
 - Nvidia - RTX 4090/5090/Quadro RTX 8000/Tesla A100 
 - AMD - Instinct Mi50/100/200

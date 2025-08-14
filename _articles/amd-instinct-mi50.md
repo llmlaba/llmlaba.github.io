@@ -15,7 +15,7 @@ images:
 {% include gallery.html images=page.images gallery_id=page.title %}
 
 ## Hot links
-> if not exist check archive.org
+If not exist check archive.org  
 - [Download driver](https://www.amd.com/en/support/downloads/drivers.html/accelerators/instinct/instinct-mi-series/instinct-mi50-32gb.html)
 - [Install installer](https://amdgpu-install.readthedocs.io/en/latest/install-prereq.html#installing-the-installer-package)
 - [Install driver option 1](https://amdgpu-install.readthedocs.io/en/latest/install-script.html)
