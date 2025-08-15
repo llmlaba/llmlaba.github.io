@@ -26,6 +26,7 @@ git lfs install
 git clone https://huggingface.co/mistralai/Mistral-7B-v0.1 mistral
 ```
 ### Preapre python environment for CUDA:
+- If Windows
 ```bash
 python -m venv .venv_llm_mistral
 .\.venv_llm_mistral\Scripts\Activate.ps1
@@ -34,12 +35,23 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 pip install transformers accelerate
 python .\test_cuda_mistral.py
 ```
+- If Ubuntu
+```bash
+mkdir -p ~/llm && cd ~/llm
+python3 -m venv .venv_llm_mistral
+source ./.venv_llm_mistral/bin/activate
+python -m pip install --upgrade pip
+pip install torch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 --index-url https://download.pytorch.org/whl/cu124
+pip install transformers accelerate
+```
 ### Create script test_cuda_mistral.py:
 ```python
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 import torch
 
-print(torch.cuda.is_available())
+print("GPU available:", torch.cuda.is_available())
+print("GPU name:", torch.cuda.get_device_name(0))
+
 tokenizer = AutoTokenizer.from_pretrained("C:\\Users\\admin\\llm\\mistral")
 model     = AutoModelForCausalLM.from_pretrained(
     "C:\\Users\\admin\\llm\\mistral",
