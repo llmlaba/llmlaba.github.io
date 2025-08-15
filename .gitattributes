@@ -1,0 +1,8 @@
+# Все текстовые файлы — хранить и отдавать с LF
+* text=auto eol=lf
+
+# (необязательно) Явно пометить бинарники
+*.png binary
+*.jpg binary
+*.pdf binary
+*.zip binary
