@@ -81,7 +81,8 @@ python -m pip install --upgrade pip
 pip install torch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 --index-url https://download.pytorch.org/whl/cu124
 pip install transformers accelerate
 ```
-- Create script test_bad_cuda_mistral.py:  
+- Create script test_bad_cuda_mistral.py:
+
 ```python
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 import torch
