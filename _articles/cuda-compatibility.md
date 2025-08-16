@@ -18,7 +18,7 @@ The table below shows, for each NVIDIA architecture generation: its **Compute Ca
 
 | Architecture (examples) | Compute Capability (SM) | Last Linux driver branch that supports the architecture | Newest compatible CUDA Toolkit |
 |---|---:|---|---|
-| **Kepler** (GTX 780, Tesla K80) | 3.0 / 3.5 / 3.7 | **R470 (Legacy)** — support removed after this branch | **11.8** for SM 3.5/3.7; for SM 3.0 use **10.2** |
+| **Kepler** (GTX 780, Tesla K80) | 3.0 / 3.5 / 3.7 | **R470 (Legacy)** — support removed after this branch | **11.4** for SM 3.5/3.7; for SM 3.0 use **10.2** |
 | **Maxwell** (Tesla M10/M60, GTX 9xx) | 5.0 / 5.2 / 5.3 | **R580** — last branch for Maxwell | **12.x** |
 | **Pascal** (P100/P40, GTX 10xx) | 6.0 / 6.1 / 6.2 | **R580** — last branch for Pascal | **12.x** |
 | **Volta** (V100/Jetson Xavier) | 7.0 / 7.2 | **R580** — last branch for Volta | **12.x** |
