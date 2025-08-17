@@ -8,6 +8,8 @@ images:
   - /assets/articles/nvidia-tesla-k80/1.jpg
   - /assets/articles/nvidia-tesla-k80/2.jpg
   - /assets/articles/nvidia-tesla-k80/3.jpg
+  - /assets/articles/nvidia-tesla-k80/4.jpg
+  - /assets/articles/nvidia-tesla-k80/5.jpg
 ---
 
 # NVIDIA Tesla K80 GPU 
@@ -88,5 +90,51 @@ USE_CUDA=1 python setup.py install
 - Check PyTorch installation
 
 ```bash
+cd ~/llm
 python3 -c "import torch; print(torch.__version__); print(torch.cuda.is_available());print(torch.cuda.get_device_name(0));"
+```
+- Install LLM dependancies
+
+```bash
+pip install "transformers==4.46.3" "accelerate==0.34.2" "tokenizers<0.21" "safetensors<0.5"
+```
+
+## Dry-run!
+
+### Mistral 7b
+
+- Get the Mistral:
+
+```bash
+cd ~/llm
+git lfs install
+git clone https://huggingface.co/mistralai/Mistral-7B-v0.1 mistral
+```
+- Create script test_bad_cuda_mistral.py:
+
+```python
+from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+import torch
+import time
+
+print("GPU available:", torch.cuda.is_available())
+print("GPU name:", torch.cuda.get_device_name(0))
+
+model_path = "/home/sysadmin/llm/mistral"
+
+tokenizer = AutoTokenizer.from_pretrained(model_path)
+model     = AutoModelForCausalLM.from_pretrained(
+    model_path,
+    device_map="auto",
+    offload_folder="offload",
+    torch_dtype=torch.float16
+)
+
+generator = pipeline(
+    "text-generation",
+    model=model,
+    tokenizer=tokenizer
+)
+
+print(generator("Tell the story about sun.", max_new_tokens=120)[0]["generated_text"])
 ```
