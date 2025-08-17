@@ -23,7 +23,7 @@ This cheat sheet maps **Compute Capability (CC)** → **newest usable CUDA Toolk
 | Compute Capability (CC) | Typical generations | Newest usable CUDA Toolkit | Recommended PyTorch (latest with such wheels) | Example pip command |
 |---:|---|---|---|---|
 | **3.5 / 3.7** | Kepler (e.g., Tesla K80) | **CUDA 10.2** | **PyTorch 1.12.1** (cu102) | `pip install torch==1.12.1+cu102 torchvision==0.13.1+cu102 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu102` |
-| **3.5 / 3.7** | Kepler (e.g., Tesla K80) | **CUDA 11.8** | **PyTorch 2.x** | **manual build** |
+| **3.5 / 3.7** | Kepler (e.g., Tesla K80) | **CUDA 11.4** | **PyTorch 2.2.0** | **manual build** |
 | **5.0 / 5.2 / 5.3** | **Maxwell** (Tesla M10/M60, GTX 9xx) | **CUDA 12.4** (12.1 also fine) | **PyTorch 2.5.0** (cu124 or cu121) | cu124: `pip install torch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 --index-url https://download.pytorch.org/whl/cu124`  •  cu121: `... --index-url https://download.pytorch.org/whl/cu121` |
 | **6.0 / 6.1 / 6.2** | **Pascal** (P100/P40, GTX 10xx) | **CUDA 12.4** | **PyTorch 2.5.0** (cu124 or cu121) | same as above (cu124/cu121) |
 | **7.0 / 7.2** | **Volta** (V100/Jetson Xavier) | **CUDA 12.4** | **PyTorch 2.5.0** (cu124 or cu121) | same as above (cu124/cu121) |
