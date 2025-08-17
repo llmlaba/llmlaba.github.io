@@ -39,11 +39,13 @@ sudo reboot
 
 ## Driver setup and tools preparation
 - Install drivers **nvidia-driver-470** and tools
+
 ```bash
 sudo apt install nvidia-driver-470 clinfo cmake-mozilla python3.8-venv python3.8-dev git
 sudo reboot
 ```
 - Install CUDA
+
 ```bash
 wget https://developer.download.nvidia.com/compute/cuda/11.4.4/local_installers/cuda_11.4.4_470.82.01_linux.run
 sudo sh cuda_11.4.4_470.82.01_linux.run --toolkit --samples
@@ -56,13 +58,15 @@ nvcc --version
 ```
 
 - Check nvidia driver installation
+
 ```bash
 nvidia-smi
 clinfo
 ```
 
 ## Build PyTorch
-- Prepare python environmetn
+- Prepare python environment
+
 ```bash
 mkdir -p ~/llm && cd ~/llm
 python3 -m venv .venv_llm
@@ -70,15 +74,19 @@ source ./.venv_llm/bin/activate
 python -m pip install --upgrade pip
 ```
 - Get **PyTorch** sources
+
 ```bash
 git clone -b release/2.2 https://github.com/pytorch/pytorch.git
 cd ./pytorch
 ```
 - Compile PyTorch and install to virtalenv
+
 ```bash
+pip install -r requirements.txt
 USE_CUDA=1 python setup.py install
 ```
 - Check PyTorch installation
+
 ```bash
 python3 -c "import torch; print(torch.__version__); print(torch.cuda.is_available());print(torch.cuda.get_device_name(0));"
 ```
