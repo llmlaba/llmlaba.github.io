@@ -5,6 +5,7 @@ date: 2025-08-10
 categories: [software, llm]
 
 images:
+  - /assets/articles/general/Llama1-logo.png
   - /assets/articles/llama-cpp-simple/1.jpg
   - /assets/articles/llama-cpp-simple/2.jpg
   - /assets/articles/llama-cpp-simple/1.gif
