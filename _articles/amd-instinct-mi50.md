@@ -44,13 +44,13 @@ sudo reboot
 ## Driver setup
 - Install drivers
 ```bash
+gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv 9386B48A1A693C5C
+gpg --export --armor 9386B48A1A693C5C | sudo apt-key add -
 cd /tmp
 wget https://repo.radeon.com/amdgpu-install/6.4.2.1/ubuntu/noble/amdgpu-install_6.4.60402-1_all.deb
 sudo apt install ./amdgpu-install_6.4.60402-1_all.deb
-sudo apt install rocm-smi
+sudo apt install rocm-smi clinfo rocminfo
 sudo amdgpu-install --usecase=workstation --vulkan=pro --opencl=rocr
-# OR (I can't remember wich is better)
-sudo amdgpu-install -y --usecase=graphics
 ```
 - Add your user to the required groups to enable access to ROCm drivers and GPU hardware
 ```bash
