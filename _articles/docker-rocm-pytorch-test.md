@@ -239,6 +239,7 @@ Main docker compose orchestration steps
 - Build new image for LLM, bake libraries and application scripts inside
 - Enable port forwarding for application to docker host
 - Mount AMD driver devices to container
+- Add AMD ROCm groups to container user
 - Mount folder with LLM Mistral
 - Create local network just in case
 
@@ -278,6 +279,8 @@ networks:
 #### Run Mistral in Docker and make a test request
 - Deploy docker compose 
 ```bash
+echo "RENDER_GID=$(getent group render | cut -d: -f3)" > .env
+echo "VIDEO_GID=$(getent group video  | cut -d: -f3)" >> .env
 docker-compose up
 ```
 - Check logs
