@@ -3,6 +3,9 @@ title: [LLM Laboratory]
 description: [Home Large Language Models research laboratory]
 owner: [Dmitrii Kostakov]
 
+url: "https://llmlaba.com"
+baseurl: ""
+
 collections:
   articles:
     output: true
