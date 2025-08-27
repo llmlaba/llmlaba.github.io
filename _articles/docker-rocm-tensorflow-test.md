@@ -320,7 +320,7 @@ curl -s http://localhost:8080/v1/completion \
 
 - Stop docker container
 ```bash
-./docker_env.sh down
+docker-compose down
 ```
 
 ## Enjoy the result
