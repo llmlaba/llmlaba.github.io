@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Compilation PyTorch BitsAndBytes fro CUDA 11.4"
+title: "Compilation PyTorch BitsAndBytes for CUDA 11.4"
 date: 2025-08-28
 categories: [llm, software]
 
@@ -8,7 +8,7 @@ images:
   - /assets/articles/cuda-kepler-bitsandbytes/1.jpg
 ---
 
-# Compilation PyTorch BitsAndBytes fro CUDA 11.4 (Kepler)
+# Compilation PyTorch BitsAndBytes for CUDA 11.4 (Kepler)
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
