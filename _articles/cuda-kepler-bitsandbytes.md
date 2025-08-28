@@ -15,7 +15,7 @@ images:
 ## Hot links
 - [CUDA Toolkit](https://developer.nvidia.com/cuda-11-4-4-download-archive)
 - [PyTorch 2.2.0](https://github.com/pytorch/pytorch/tree/release/2.2?tab=readme-ov-file#from-source)
-- [BitsAndBytes 0.44.1](https://github.com/bitsandbytes-foundation/bitsandbytes/blob/0.45.1/docs/source/installation.mdx)
+- [BitsAndBytes 0.44.1](https://github.com/bitsandbytes-foundation/bitsandbytes/blob/0.44.1/docs/source/installation.mdx)
 
 ## Requirments
 - Ubuntu 20.04
