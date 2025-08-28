@@ -6,6 +6,7 @@ categories: [software, llm]
 
 images:
   - /assets/articles/pytorch-pp512-tg128-bench/1.jpg
+  - /assets/articles/pytorch-pp512-tg128-bench/2.jpg
 ---
 
 # PyTorch pp512 and tg128 LLM Benchmark
