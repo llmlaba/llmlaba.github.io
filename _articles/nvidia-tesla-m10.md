@@ -84,7 +84,7 @@ mkdir -p ~/llm && cd ~/llm
 python3 -m venv .venv_llm_mistral
 source ./.venv_llm_mistral/bin/activate
 python -m pip install --upgrade pip
-pip install torch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 --index-url https://download.pytorch.org/whl/cu124
+pip install "torch==2.5.0" "torchvision==0.20.0" "torchaudio==2.5.0" --index-url https://download.pytorch.org/whl/cu124
 pip install transformers accelerate
 ```
 - Create script test_bad_cuda_mistral.py:
@@ -131,7 +131,7 @@ mkdir -p ~/llm && cd ~/llm
 python3 -m venv .venv_llm_sd1.5
 source ./.venv_llm_sd1.5/bin/activate
 python -m pip install --upgrade pip
-pip install torch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 --index-url https://download.pytorch.org/whl/cu124
+pip install "torch==2.5.0" "torchvision==0.20.0" "torchaudio==2.5.0" --index-url https://download.pytorch.org/whl/cu124
 pip install transformers accelerate diffusers safetensors
 ```
 - Create script test_bad_cuda_sd1.5.py:
