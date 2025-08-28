@@ -60,7 +60,7 @@ python3 -m venv .venv_llm_bench
 source ./.venv_llm_bench/bin/activate
 python -m pip install --upgrade pip
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm6.0
-pip install transformers>=4.41 accelerate einops
+pip install transformers>=4.41 accelerate einops rich
 ```
 
 - For NVIDIA CUDA 12
@@ -71,7 +71,7 @@ python3 -m venv .venv_llm_bench
 source ./.venv_llm_bench/bin/activate
 python -m pip install --upgrade pip
 pip install torch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 --index-url https://download.pytorch.org/whl/cu124
-pip install transformers>=4.41 accelerate einops
+pip install transformers>=4.41 accelerate einops rich
 ```
 
 - Check pytorch
