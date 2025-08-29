@@ -49,8 +49,8 @@ gpg --export --armor 9386B48A1A693C5C | sudo apt-key add -
 cd /tmp
 wget https://repo.radeon.com/amdgpu-install/6.4.2.1/ubuntu/noble/amdgpu-install_6.4.60402-1_all.deb
 sudo apt install ./amdgpu-install_6.4.60402-1_all.deb
-sudo apt install rocm-smi clinfo rocminfo
 sudo amdgpu-install --usecase=workstation --vulkan=pro --opencl=rocr
+sudo apt install rocm-smi clinfo rocminfo
 ```
 - Add your user to the required groups to enable access to ROCm drivers and GPU hardware
 ```bash
