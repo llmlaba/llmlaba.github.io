@@ -7,6 +7,7 @@ categories: [software, llm]
 images:
   - /assets/articles/pytorch-pp512-tg128-bench/1.jpg
   - /assets/articles/pytorch-pp512-tg128-bench/2.jpg
+  - /assets/articles/pytorch-pp512-tg128-bench/3.jpg
 ---
 
 # PyTorch pp512 and tg128 LLM Benchmark
@@ -71,7 +72,7 @@ mkdir -p ~/llm && cd ~/llm
 python3 -m venv .venv_llm_bench
 source ./.venv_llm_bench/bin/activate
 python -m pip install --upgrade pip
-pip install torch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 --index-url https://download.pytorch.org/whl/cu124
+pip install "torch==2.5.0" "torchvision==0.20.0" "torchaudio==2.5.0" --index-url https://download.pytorch.org/whl/cu124
 pip install "transformers>=4.41" accelerate einops rich
 ```
 
