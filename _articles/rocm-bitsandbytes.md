@@ -106,7 +106,7 @@ cmake -DCOMPUTE_BACKEND=hip -DBNB_ROCM_ARCH="gfx906" -S .
 make
 pip install .
 ```
-- Check PyTorch installation
+- Check BitsAndBytes installation
 
 ```bash
 cd ~/llm
