@@ -72,6 +72,7 @@ sudo apt install cmake python3-venv python3-dev git
 - Prepare python environment and install PyTorch 2.5.1
 
 ```bash
+mkdir -p ~/llm && cd ~/llm
 python3 -m venv .venv_llm
 source ./.venv_llm/bin/activate
 python -m pip install --upgrade pip
@@ -92,6 +93,7 @@ python3 -c "import torch; print(torch.__version__); print(torch.cuda.is_availabl
 git clone -b rocm_enabled_multi_backend https://github.com/ROCm/bitsandbytes.git
 cd ./bitsandbytes
 ```
+- **Manually** fix BNB version in `setup.py` original from sources `0.43.3.dev` should be changed to `0.43.3.post1`, it is impornat for **diffusers** library.
 
 - Compile BitsAndBytes and install to virtalenv
 > We shold specify AMD GPU version here
