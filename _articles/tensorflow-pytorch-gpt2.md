@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "TensorFlow vs PyTorch GPT2"
-date: 2025-06-18
+date: 2025-08-18
 categories: [llm, software]
 
 images:

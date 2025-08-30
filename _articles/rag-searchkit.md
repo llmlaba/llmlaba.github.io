@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "LLM semantic search"
-date: 2025-06-22
+date: 2025-08-22
 categories: [llm, software]
 
 images:

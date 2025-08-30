@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Stable Diffusion v1.5 ROCm BitsAndBytes PyTorch Test"
-date: 2025-08-09
+date: 2025-08-30
 categories: [llm, software]
 
 images:
