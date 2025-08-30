@@ -147,7 +147,7 @@ out.images[0].save("test_bnb.png", format="PNG")
 ```
 
 ### Run test 
-> Check `rocm-smi` during each test
+> Check `rocm-smi` during each test `while true; do rocm-smi; sleep 1; done`
 
 - Without quantization
 

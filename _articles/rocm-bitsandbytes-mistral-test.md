@@ -117,7 +117,7 @@ time.sleep(30)  # Wait for a few seconds before exiting
 ```
 
 ### Run test 
-> Check `rocm-smi` during each test
+> Check `rocm-smi` during each test `while true; do rocm-smi; sleep 1; done`
 
 - Without quantization
 
@@ -137,7 +137,7 @@ python ./test_rocm_bnb_mistral.py
 [PyTorch pp512 and tg128 LLM Benchmark](/articles/pytorch-pp512-tg128-bench.html)
 
 ### Run test 
-> Check `rocm-smi` during each test
+> Check `rocm-smi` during each test `while true; do rocm-smi; sleep 1; done`
 
 - Without quantization
 
