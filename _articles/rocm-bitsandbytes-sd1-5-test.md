@@ -7,6 +7,7 @@ categories: [llm, software]
 images:
   - /assets/articles/rocm-bitsandbytes-sd1-5-test/1.jpg
   - /assets/articles/rocm-bitsandbytes-sd1-5-test/2.jpg
+  - /assets/articles/rocm-bitsandbytes-sd1-5-test/3.jpg
 ---
 
 # Stable Diffusion v1.5 ROCm PyTorch Test 
