@@ -49,6 +49,7 @@ git clone https://huggingface.co/mistralai/Mistral-7B-v0.1 mistral
 ```
 
 ### Create script test_rocm_mistral.py:
+
 ```python
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 import torch
@@ -78,6 +79,7 @@ time.sleep(30)  # Wait for a few seconds before exiting
 ```
 
 ### Create script test_rocm_bnb_mistral.py:
+
 ```python
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 from transformers import BitsAndBytesConfig
