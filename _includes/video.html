@@ -1,0 +1,13 @@
+<video
+  {% if include.autoplay %}autoplay muted playsinline{% endif %}
+  controls
+  preload="{{ include.preload | default: 'metadata' }}"
+  style="max-width:100%;height:auto;border-radius:12px;"
+  {% if include.poster %}poster="{{ include.poster | relative_url }}"{% endif %}
+>
+  <source src="{{ include.src | relative_url }}" type="{{ include.type | default: 'video/mp4' }}">
+  {% if include.src_webm %}
+  <source src="{{ include.src_webm | relative_url }}" type="video/webm">
+  {% endif %}
+  Ваш браузер не поддерживает видео-тег.
+</video>
