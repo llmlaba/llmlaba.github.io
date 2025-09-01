@@ -29,9 +29,9 @@ title: "Main page"
   {% endif %}
 {% endfor %}
 
-## Known issues/errors
+## Known issues / errors
 {% for article in site.articles %}
-  {% if article.categories contains "error" %}
+  {% if article.categories contains "issue" %}
 - [{{ article.title }}]({{ article.url | relative_url }}) — {{ article.date | date: "%d.%m.%Y" }}
   {% endif %}
 {% endfor %}
