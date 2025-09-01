@@ -8,6 +8,7 @@ images:
   - /assets/articles/general/Logo_and_CUDA.png
   - /assets/articles/general/BNB_Logo.png
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # BitsAndBytes CUDA Compatibility — quick cheat sheet
 

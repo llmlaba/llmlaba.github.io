@@ -4,6 +4,7 @@ title: "Mistral 7b CUDA low memory GPU PyTorch Test"
 date: 2025-06-14
 categories: [llm, software]
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # Mistral 7b Bad CUDA PyTorch Test 
 

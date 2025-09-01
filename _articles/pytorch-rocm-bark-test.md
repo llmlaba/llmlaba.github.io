@@ -4,7 +4,8 @@ title: "SUNO Bark ROCm PyTorch Test"
 date: 2025-08-31
 categories: [llm, software]
 ---
-
+> Date: {{ page.date | date: "%d.%m.%Y" }}
+  
 # SUNO Bark ROCm PyTorch Test
 
 {% include video.html 
@@ -12,7 +13,6 @@ categories: [llm, software]
     src="/assets/articles/pytorch-rocm-bark-test/1.mp4" 
     src_webm="/assets/articles/pytorch-rocm-bark-test/1.webm" 
 %}
-
 
 ## Requirments 
 - AMD Mi50/MI100 32Gb VRAM

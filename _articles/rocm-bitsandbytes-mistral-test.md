@@ -13,6 +13,7 @@ images:
   - /assets/articles/rocm-bitsandbytes-mistral-test/6.jpg
   - /assets/articles/rocm-bitsandbytes-mistral-test/7.jpg
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # ROCm PyTorch BitsAndBytes Mistral Test
 

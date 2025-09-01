@@ -7,6 +7,7 @@ categories: [llm, software]
 images:
   - /assets/articles/pytorch-bad-cuda-sd1-5-test/1.jpg
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # Stable Diffusion v1.5 Bad CUDA PyTorch Test 
 

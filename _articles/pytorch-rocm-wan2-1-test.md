@@ -4,6 +4,7 @@ title: "WAN 2.1 1.3b diffusers ROCm PyTorch Test"
 date: 2025-08-11
 categories: [draft]
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # WAN 2.1 1.3b diffusers ROCm PyTorch Test 
 

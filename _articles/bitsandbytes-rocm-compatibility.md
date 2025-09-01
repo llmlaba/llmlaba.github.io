@@ -8,6 +8,7 @@ images:
   - /assets/articles/general/ROCm_logo.png
   - /assets/articles/general/BNB_Logo.png
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # BitsAndBytes ROCm Compatibility
 

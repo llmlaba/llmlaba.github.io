@@ -4,6 +4,7 @@ title: "Begin your journey in LLM"
 date: 2025-08-14
 categories: [general]
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # Begin your journey in LLM
 > ...

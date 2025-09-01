@@ -9,6 +9,7 @@ images:
   - /assets/articles/amd-instinct-mi50/2.jpg
   - /assets/articles/amd-instinct-mi50/3.jpg
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # AMD Instinct Mi50 GPU 
 

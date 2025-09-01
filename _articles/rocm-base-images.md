@@ -7,6 +7,7 @@ categories: [general]
 images:
   - /assets/articles/general/ROCm_logo.png
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # AMD ROCm Docker Base Images 
 

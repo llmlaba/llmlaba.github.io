@@ -7,6 +7,7 @@ categories: [llm, software]
 images:
   - /assets/articles/pytorch-rocm-mistral-test/1.jpg
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # Mistral 7b ROCm PyTorch Test 
 

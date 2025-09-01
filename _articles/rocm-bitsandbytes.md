@@ -7,6 +7,7 @@ categories: [llm, software]
 images:
   - /assets/articles/rocm-bitsandbytes/1.jpg
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # Compilation BitsAndBytes for ROCm 6.2 
 

@@ -10,6 +10,7 @@ images:
   - /assets/articles/llama-cpp-simple/2.jpg
   - /assets/articles/llama-cpp-simple/1.gif
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # llama.cpp - run LLM everywhere 
 

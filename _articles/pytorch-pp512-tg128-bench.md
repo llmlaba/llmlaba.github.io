@@ -9,6 +9,7 @@ images:
   - /assets/articles/pytorch-pp512-tg128-bench/2.jpg
   - /assets/articles/pytorch-pp512-tg128-bench/3.jpg
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # PyTorch pp512 and tg128 LLM Benchmark
 

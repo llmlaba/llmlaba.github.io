@@ -7,6 +7,7 @@ categories: [general]
 images:
   - /assets/articles/general/TF_logo.png
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # TensorFlow-friendly causal LMs in 🤗 Transformers 4.x
 

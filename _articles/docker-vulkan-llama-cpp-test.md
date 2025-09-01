@@ -7,6 +7,7 @@ categories: [software, llm]
 images:
   - /assets/articles/docker-vulkan-llama-cpp-test/1.jpg
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # Vulkan llama.cpp in Docker Test
 

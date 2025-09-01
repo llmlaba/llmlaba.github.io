@@ -9,6 +9,7 @@ images:
   - /assets/articles/general/PyTorch_logo.jpeg
   - /assets/articles/general/TF_logo.png
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # NVIDIA CUDA Docker Images for PyTorch / TensorFlow
 

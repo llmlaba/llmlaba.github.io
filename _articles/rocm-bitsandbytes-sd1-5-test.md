@@ -9,6 +9,7 @@ images:
   - /assets/articles/rocm-bitsandbytes-sd1-5-test/2.jpg
   - /assets/articles/rocm-bitsandbytes-sd1-5-test/3.jpg
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # Stable Diffusion v1.5 ROCm PyTorch Test 
 

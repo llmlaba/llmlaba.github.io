@@ -7,6 +7,7 @@ categories: [general]
 images:
   - /assets/articles/general/Logo_and_CUDA.png
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # NVIDIA CUDA Docker Base Images 
 

@@ -4,6 +4,7 @@ title: "PyTorch convert binary weights from bin to safetensors"
 date: 2025-09-01
 categories: [issue]
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # Instruction how to convert PyTorch binary weights from bin to safetensors
 

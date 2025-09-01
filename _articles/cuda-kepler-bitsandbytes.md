@@ -7,6 +7,7 @@ categories: [llm, software]
 images:
   - /assets/articles/cuda-kepler-bitsandbytes/1.jpg
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # Compilation PyTorch BitsAndBytes for CUDA 11.4 (Kepler)
 

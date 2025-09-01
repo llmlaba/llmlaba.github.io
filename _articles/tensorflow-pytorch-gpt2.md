@@ -10,6 +10,7 @@ images:
   - /assets/articles/tensorflow-pytorch-gpt2/3.jpg
   - /assets/articles/tensorflow-pytorch-gpt2/4.jpg
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # TensorFlow vs PyTorch GPT2
 

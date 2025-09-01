@@ -8,6 +8,7 @@ images:
   - /assets/articles/general/Logo_and_CUDA.png
   - /assets/articles/general/PyTorch_logo.jpeg
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # CUDA & PyTorch Compatibility by Compute Capability (CC)
 

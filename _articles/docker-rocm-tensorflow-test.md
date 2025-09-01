@@ -9,6 +9,7 @@ images:
   - /assets/articles/docker-rocm-tensorflow-test/2.jpg
   - /assets/articles/docker-rocm-tensorflow-test/3.jpg
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # AMD ROCm TensorFlow in Docker Test
 

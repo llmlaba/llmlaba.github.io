@@ -8,6 +8,7 @@ images:
   - /assets/articles/rag-searchkit/1.jpg
   - /assets/articles/rag-searchkit/2.jpg
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # LLM semantic search
 

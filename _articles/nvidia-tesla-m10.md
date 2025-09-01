@@ -14,6 +14,7 @@ images:
   - /assets/articles/nvidia-tesla-m10/7.jpg
   - /assets/articles/nvidia-tesla-m10/8.jpg
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # NVIDIA Tesla M10 GPU 
 

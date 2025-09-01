@@ -14,6 +14,7 @@ images:
   - /assets/articles/nvidia-tesla-k80/7.jpg
   - /assets/articles/nvidia-tesla-k80/8.jpg
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # NVIDIA Tesla K80 GPU 
 

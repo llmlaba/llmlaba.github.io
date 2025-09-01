@@ -8,6 +8,7 @@ images:
   - /assets/articles/pytorch-rocm-sd1-5-test/1.jpg
   - /assets/articles/pytorch-rocm-sd1-5-test/2.jpg
 ---
+> Date: {{ page.date | date: "%d.%m.%Y" }}  
 
 # Stable Diffusion v1.5 ROCm PyTorch Test 
 
