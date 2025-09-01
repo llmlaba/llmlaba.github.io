@@ -117,6 +117,7 @@ audio = model.generate(
     do_sample=True,
     fine_temperature=0.4,
     coarse_temperature=0.8,
+    pad_token_id = processor.tokenizer.pad_token_id,
 )
 
 write_wav(
