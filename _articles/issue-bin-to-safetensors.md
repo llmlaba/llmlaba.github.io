@@ -17,29 +17,30 @@ It required by PyTorch community, because safetensors will not allow to execute 
 > Convert mannualy pytorch_model.bin to model.safetensors with **torch.load()** and **safetensors.torch.save_file()** 
 
 ```python
-import torch
+ import torch
 from safetensors.torch import save_file
 
 src = "/home/sysadmin/llm/bark/pytorch_model.bin"
 dst = "/home/sysadmin/llm/bark/model.safetensors"
 
+# важно: weights_only=True (см. предупреждение torch)
 sd = torch.load(src, map_location="cpu", weights_only=True)
 
 new_sd = {}
-seen = {}  # key: (data_ptr, size, dtype, shape, stride)
+seen = {}  # ключ: (data_ptr, size, dtype, shape, stride)
 for k, t in sd.items():
     if not isinstance(t, torch.Tensor):
         continue
     stg = t.untyped_storage()
     sig = (stg.data_ptr(), stg.size(), t.dtype, tuple(t.size()), tuple(t.stride()))
     if sig in seen:
-        # этот тензор делит память — делаем независимую копию
-        new_sd[k] = t.clone()  # или t.contiguous().clone()
+        # if tensor uses shared memory copy it
+        new_sd[k] = t.clone()  # or t.contiguous().clone()
     else:
         seen[sig] = k
-        new_sd[k] = t  # первый экземпляр оставляем как есть
+        new_sd[k] = t  # original one keep without changes
 
-# сохраняем уже без шеринга
+# safe safetensors without shared memory with metadata 
 save_file(new_sd, dst, metadata={"format": "pt"})
 print("Saved:", dst)
 ```
