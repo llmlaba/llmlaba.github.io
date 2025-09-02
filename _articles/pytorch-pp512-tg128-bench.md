@@ -8,6 +8,7 @@ images:
   - /assets/articles/pytorch-pp512-tg128-bench/1.jpg
   - /assets/articles/pytorch-pp512-tg128-bench/2.jpg
   - /assets/articles/pytorch-pp512-tg128-bench/3.jpg
+  - /assets/articles/pytorch-pp512-tg128-bench/4.jpg
 ---
 > Date: {{ page.date | date: "%d.%m.%Y" }}  
 
@@ -74,6 +75,7 @@ python3 -m venv .venv_llm_bench
 source ./.venv_llm_bench/bin/activate
 python -m pip install --upgrade pip
 pip install "torch==2.5.0" "torchvision==0.20.0" "torchaudio==2.5.0" --index-url https://download.pytorch.org/whl/cu124
+pip install "bitsandbytes==0.44.1"
 pip install "transformers>=4.41" accelerate einops rich
 ```
 
@@ -97,9 +99,16 @@ git clone https://github.com/llmlaba/pp512-tg128-bench.git
 ```
 
 ### Run test
+- Without quantization
 
+```bash
+python ./app.py -m ../mistral --tests pp512 tg128 --dtype fp16 --batch 1 --attn sdpa --warmup 3 --iters 10 --ubatch 128
 ```
-python ./app.py -m ../mistral --tests pp512 tg128 --dtype fp16 --batch 2 --attn sdpa --warmup 3 --iters 10 --ubatch 128
+
+- With quantization
+
+```bash
+python ./app.py -m ../mistral --tests pp512 tg128 --dtype fp16 --batch 1 --attn sdpa --warmup 3 --iters 10 --ubatch 128 --quant 4bit
 ```
 
 ## Enjoy the result
