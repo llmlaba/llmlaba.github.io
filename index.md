@@ -35,3 +35,10 @@ title: "Main page"
 - [{{ article.title }}]({{ article.url | relative_url }}) — {{ article.date | date: "%d.%m.%Y" }}
   {% endif %}
 {% endfor %}
+
+## Failed test
+{% for article in site.articles %}
+  {% if article.categories contains "fail" %}
+- [{{ article.title }}]({{ article.url | relative_url }}) — {{ article.date | date: "%d.%m.%Y" }}
+  {% endif %}
+{% endfor %}
