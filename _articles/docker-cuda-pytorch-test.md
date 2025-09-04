@@ -277,16 +277,19 @@ networks:
 ```
 
 #### Run Mistral in Docker and make a test request
+
 - Deploy docker compose 
+
 ```bash
 docker-compose up
 ```
 - Check logs
+
 ```bash
 docker container logs pytorch-cuda_pytorch-cuda.local_1
 ```
-
 - Test request 
+
 ```bash
 curl -s http://localhost:8080/v1/completion \
   -H "Content-Type: application/json" \
@@ -298,8 +301,8 @@ curl -s http://localhost:8080/v1/completion \
     "stop": "eof"
   }' | jq
 ```
-
 - Stop docker container
+
 ```bash
 docker-compose down
 ```

@@ -1,30 +1,30 @@
 ---
 layout: default
-title: "AMD ROCm TensorFlow in Docker Test"
-date: 2025-08-25
+title: "NVIDIA CUDA TensorFlow in Docker Test"
+date: 2025-09-04
 categories: [software, llm]
 
 images:
-  - /assets/articles/docker-rocm-tensorflow-test/1.jpg
-  - /assets/articles/docker-rocm-tensorflow-test/2.jpg
-  - /assets/articles/docker-rocm-tensorflow-test/3.jpg
+  - /assets/articles/docker-cuda-tensorflow-test/1.jpg
+  - /assets/articles/docker-cuda-tensorflow-test/2.jpg
+  - /assets/articles/docker-cuda-tensorflow-test/3.jpg
 ---
 > Date: {{ page.date | date: "%d.%m.%Y" }}  
 
-# AMD ROCm TensorFlow in Docker Test
+# NVIDIA CUDA TensorFlow in Docker Test
 
-> In this article detailed described how to run TensorFlow with AMD ROCm in docker container.  
+> In this article detailed described how to run TensorFlow with nvidia cuda in docker container.  
 > Tested LLM GPT2.  
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
-## Requirements 
-- AMD Mi50/MI100 32Gb VRAM
+## Test environmet
+- NVIDIA Tesla V100
 - Workstation 40 GB RAM, 500GB SSD, 750W Power supply 
 - Ubuntu 24.04 LTS
 - Docker CE
 
-> My test environment: HP Z440 + AMD Mi50 32gb
+> My test environment: HP Z440 + NVIDIA Tesla V100
 
 ## Steps
 
@@ -39,26 +39,13 @@ git clone https://huggingface.co/openai-community/gpt2 gpt2
 
 #### Dockerfile 
 There are a few important steps that we need to complete in Dockerfile.  
-- Build metapackage for tensorflow 2.16.2
 - Create application user
 - Install tini to avoid zombie processes
-- Install the TensorFlow metapackage to prevent tensorflow-rocm from being replaced by the default TensorFlow package
 - Install all necessary libraries for GPT2 like `transformers`, etc...
 - Put simple web server to docker image, just for tests
 
 ```dockerfile
-FROM docker.io/rocm/tensorflow:rocm6.2.2-py3.9-tf2.16.2-dev AS builder
-
-USER root
-
-WORKDIR /build
-
-COPY meta-tensorflow.toml /build/tensorflow/pyproject.toml
-
-RUN pip3 install --upgrade pip wheel setuptools build && \
-    python3 -m build --wheel /build/tensorflow
-
-FROM docker.io/rocm/tensorflow:rocm6.2.2-py3.9-tf2.16.2-dev
+FROM docker.io/tensorflow/tensorflow:2.17.0-gpu
 
 USER root
 
@@ -75,10 +62,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 COPY requirements.txt ./requirements.txt
 
-COPY --from=builder /build/tensorflow/dist/tensorflow-2.16.2.post1-py3-none-any.whl ./tensorflow-2.16.2.post1-py3-none-any.whl
-
 RUN pip3 install --upgrade pip && \
-    pip3 install ./tensorflow-2.16.2.post1-py3-none-any.whl && \
     pip3 install -r requirements.txt
 
 COPY run_gpt2.py ./run_gpt2.py
@@ -215,47 +199,29 @@ if __name__ == "__main__":
 ```
 
 #### PIP install GPT2 dependencies
-To run an LLM inside the Docker container provided by AMD on Docker Hub, we need to install several additional libraries. The tricky part is that AMD compiled TensorFlow with a `-rocm` suffix, which breaks pip dependencies that expect the standard `tensorflow` package name. To resolve this, we create a metapackage for pip with the correct name and version (`tensorflow` `2.16.2.post1`). This package is built in a build container and must be installed before installing `requirements.txt`.
-- File `meta-tensorflow.toml` with tensorflow metapackage build settings
-
-```toml
-[build-system]
-requires = ["setuptools>=68", "wheel", "build"]
-build-backend = "setuptools.build_meta"
-
-[project]
-name = "tensorflow"
-version = "2.16.2.post1"
-description = "Alias: tensorflow -> tensorflow-rocm"
-requires-python = ">=3.9"
-dependencies = ["tensorflow-rocm==2.16.2"]
-
-[tool.setuptools]
-py-modules = []
-```
+To run an LLM inside the Docker container provided by nvidia on Docker Hub, we need to install several additional libraries.
 
 - File `requirements.txt` required to install pip dependancies
 
 ```
-Flask==3.0.3
+Flask==2.2.5
 transformers==4.41.2
 tokenizers==0.19.1
 safetensors==0.4.3
 huggingface-hub==0.23.4
 sentencepiece==0.2.0
-tf-keras~=2.16
+tf-keras==2.17
 ```
 
-### Run TensorFlow with ROCm in Docker Compose
+### Run TensorFlow with cuda in Docker Compose
 
-#### Prepare `docker-compose.yaml` for AMD ROCm
-To run AMD ROCm in docker we will use docker-compose orchestration to make deploy more clear.  
+#### Prepare `docker-compose.yaml` for nvidia cuda
+To run nvidia cuda in docker we will use docker-compose orchestration to make deploy more clear.  
 Main docker compose orchestration steps
 - Build new image for LLM, bake libraries and application scripts inside
 - Enable port forwarding for application to docker host
 - Set environment variables to run tensorflow properly
-- Mount AMD driver devices to container
-- Add AMD ROCm groups to container user
+- Mount nvidia driver devices to container
 - Mount folder with LLM GPT2
 - Create local network just in case
 
@@ -275,13 +241,13 @@ services:
       LANG: "C.UTF-8"
       TF_CPP_MIN_LOG_LEVEL: "2"
       TF_USE_LEGACY_KERAS: "1"
-    ipc: host
-    devices:
-      - /dev/kfd
-      - /dev/dri
-    group_add:
-      - "${RENDER_GID}"
-      - "${VIDEO_GID}"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
     volumes:
       - ../gpt2:/llm/gpt2
     networks:
@@ -299,15 +265,14 @@ networks:
 - Deploy docker compose 
 
 ```bash
-echo "RENDER_GID=$(getent group render | cut -d: -f3)" > .env
-echo "VIDEO_GID=$(getent group video  | cut -d: -f3)" >> .env
 docker-compose up
 ```
 - Check logs
 
 ```bash
-docker container logs tensorflow-rocm_tensorflow-rocm.local_1
+docker container logs tensorflow-cuda_tensorflow-rocm.local_1
 ```
+
 - Test request 
 
 ```bash
@@ -321,6 +286,7 @@ curl -s http://localhost:8080/v1/completion \
     "stop": "eof"
   }' | jq
 ```
+
 - Stop docker container
 
 ```bash

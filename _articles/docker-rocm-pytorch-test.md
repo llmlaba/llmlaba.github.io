@@ -279,17 +279,19 @@ networks:
 
 #### Run Mistral in Docker and make a test request
 - Deploy docker compose 
+
 ```bash
 echo "RENDER_GID=$(getent group render | cut -d: -f3)" > .env
 echo "VIDEO_GID=$(getent group video  | cut -d: -f3)" >> .env
 docker-compose up
 ```
 - Check logs
+
 ```bash
 docker container logs pytorch-rocm_pytorch-rocm.local_1
 ```
-
 - Test request 
+
 ```bash
 curl -s http://localhost:8080/v1/completion \
   -H "Content-Type: application/json" \
@@ -301,8 +303,8 @@ curl -s http://localhost:8080/v1/completion \
     "stop": "eof"
   }' | jq
 ```
-
 - Stop docker container
+
 ```bash
 docker-compose down
 ```
