@@ -34,7 +34,7 @@ python -m bitsandbytes
 ### Get the WAN 2.1
 ```bash
 git lfs install
-git clone git clone https://huggingface.co/Wan-AI/Wan2.1-VACE-1.3B-diffusers wan2.1d
+git clone https://huggingface.co/Wan-AI/Wan2.1-VACE-1.3B-diffusers wan2.1d
 ```
 
 ### Create script test_rocm_wan2.1d.py:

@@ -57,7 +57,7 @@ python -c 'import torchaudio; print("backends:", torchaudio.list_audio_backends(
 
 ```bash
 git lfs install
-git clone git clone https://huggingface.co/suno/bark bark
+git clone https://huggingface.co/suno/bark bark
 ```
 
 ### Convert bark `pytorch_model.bin` to `model.safetensors`
