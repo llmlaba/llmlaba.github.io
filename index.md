@@ -17,7 +17,7 @@ title: "Main page"
 
 ## GPU
 {% for article in site.articles %}
-  {% if article.categories contains "gpu" %}
+  {% if article.categories contains "hardware" %}
 - [{{ article.title }}]({{ article.url | relative_url }}) — {{ article.date | date: "%d.%m.%Y" }}
   {% endif %}
 {% endfor %}
