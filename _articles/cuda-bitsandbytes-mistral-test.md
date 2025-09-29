@@ -79,7 +79,7 @@ generator = pipeline(
     device=0  # Use GPU
 )
 
-print(generator("What you know about sun?", max_new_tokens=60)[0]["generated_text"])
+print(generator("What you know about sun?", max_new_tokens=160)[0]["generated_text"])
 ```
 
 ### Create script test_cuda_bnb4_mistral.py:
@@ -106,7 +106,7 @@ model     = AutoModelForCausalLM.from_pretrained(
     model_path,
     quantization_config=qconf,
     torch_dtype=torch.float16
-).to("cuda")
+)
 
 generator = pipeline(
     "text-generation",
@@ -114,7 +114,7 @@ generator = pipeline(
     tokenizer=tokenizer
 )
 
-print(generator("What you know about sun?", max_new_tokens=60)[0]["generated_text"])
+print(generator("What you know about sun?", max_new_tokens=160)[0]["generated_text"])
 ```
 
 ### Create script test_cuda_bnb8_mistral.py:
