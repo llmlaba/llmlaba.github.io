@@ -26,6 +26,7 @@ images:
 - Linux only, there is no driver for windows
 - This GPU is considered outdated; future versions of nvidia drivers may drop support for it
 - Required external fun
+- BitsAndBytes 8bit quantization not supported
 
 ## Test environment 
 - Workstation 40 GB RAM, 500GB SSD, 750W Power supply 
