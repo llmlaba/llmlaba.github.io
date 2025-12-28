@@ -8,6 +8,9 @@ images:
   - /assets/articles/sd15-sd20-sdxl-test/1.jpg
   - /assets/articles/sd15-sd20-sdxl-test/2.jpg
   - /assets/articles/sd15-sd20-sdxl-test/3.jpg
+  - /assets/articles/sd15-sd20-sdxl-test/4.jpg
+  - /assets/articles/sd15-sd20-sdxl-test/5.jpg
+  - /assets/articles/sd15-sd20-sdxl-test/6.jpg
 ---
 > Date: {{ page.date | date: "%d.%m.%Y" }}  
 
@@ -104,7 +107,7 @@ image.save(f"test_image_sd15_{seed}.png", format="PNG")
 python test_cuda_sd1.5.py
 ```
 
-### Create script test_cuda_sd2.0.py
+### Create script test_cuda_sd2.0.py:
 
 ```python
 from diffusers import StableDiffusionPipeline
@@ -149,7 +152,7 @@ image.save(f"test_image_sd20_{seed}.png", format="PNG")
 - Run test
 
 ```bash
-python test_cuda_mistral_chat_mode.py
+python test_cuda_sd2.0.py
 ```
 
 ### Create script test_cuda_sdxl.py:
