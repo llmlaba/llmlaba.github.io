@@ -5,9 +5,9 @@ date: 2025-12-28
 categories: [llm, software]
 
 images:
-  - /assets/articles/deterministic-mistral-test.md/1.jpg
-  - /assets/articles/deterministic-mistral-test.md/2.jpg
-  - /assets/articles/deterministic-mistral-test.md/2.jpg
+  - /assets/articles/deterministic-mistral-test/1.jpg
+  - /assets/articles/deterministic-mistral-test/2.jpg
+  - /assets/articles/deterministic-mistral-test/2.jpg
 ---
 > Date: {{ page.date | date: "%d.%m.%Y" }}  
 
