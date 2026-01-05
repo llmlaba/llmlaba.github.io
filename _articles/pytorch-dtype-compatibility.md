@@ -17,7 +17,7 @@ The table below shows, **dtype in API** that we can use in `torch_dtype=...` for
 
 ## Floating-point dtype
 
-| PyTorch версия | Поддерживаемые dtype (float) |
+| PyTorch version | Supported dtype |
 |---|---|
 | ≥ 1.1 | `torch.float16` (`torch.half`)<br>`torch.float32` (`torch.float`)<br>`torch.float64` (`torch.double`) |
 | ≥ 1.6 | `torch.float16` (`torch.half`)<br>`torch.float32` (`torch.float`)<br>`torch.float64` (`torch.double`)<br>`torch.bfloat16` |
