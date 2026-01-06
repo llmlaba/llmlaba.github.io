@@ -7,6 +7,14 @@ title: "Main page"
 - Occasionally, I write about LLM AI technologies that interest me on this blog.
 - If you want to begin your learning journey about LLM AI, this blog will be very helpful for you.
 
+## Projects
+
+{% for article in site.articles %}
+  {% if article.categories contains "project" %}
+- [{{ article.title }}]({{ article.url | relative_url }}) — {{ article.date | date: "%d.%m.%Y" }}
+  {% endif %}
+{% endfor %}
+
 ## General
 
 {% for article in site.articles %}

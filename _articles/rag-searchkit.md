@@ -2,7 +2,7 @@
 layout: default
 title: "LLM semantic search"
 date: 2025-08-22
-categories: [llm, software]
+categories: [project]
 
 images:
   - /assets/articles/rag-searchkit/1.jpg

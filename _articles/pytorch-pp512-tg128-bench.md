@@ -2,7 +2,7 @@
 layout: default
 title: "PyTorch pp512 and tg128 LLM Benchmark"
 date: 2025-08-27
-categories: [software, llm]
+categories: [project]
 
 images:
   - /assets/articles/pytorch-pp512-tg128-bench/1.jpg
