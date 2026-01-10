@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Falcon 7b CUDA PyTorch Test"
-date: 2025-01-09
+date: 2026-01-09
 categories: [llm, software]
 
 images:
