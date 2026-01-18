@@ -23,8 +23,8 @@ The table below shows, for each NVIDIA architecture generation: its **Compute Ca
 | **Maxwell** (Tesla M10/M60, GTX 9xx) | 5.0 / 5.2 / 5.3 | **R580** — last branch for Maxwell | **12.x** |
 | **Pascal** (P100/P40, GTX 10xx) | 6.0 / 6.1 / 6.2 | **R580** — last branch for Pascal | **12.x** |
 | **Volta** (V100/Jetson Xavier) | 7.0 / 7.2 | **R580** — last branch for Volta | **12.x** |
-| **Turing** (RTX 20xx/Quadro RTX) | 7.5 | Supported by current branches (R580 and newer) | **13.x** and newer |
-| **Ampere** (A100/RTX 30xx/Orin) | 8.0 / 8.6 / 8.7 | Supported by current branches | **13.x** and newer |
+| **Turing** (RTX 20xx/Quadro RTX) | 7.5 | Supported by current branches (R580 and newer) | **12.8** and newer |
+| **Ampere** (A100/RTX 30xx/Orin) | 8.0 / 8.6 / 8.7 | Supported by current branches | **12.8** and newer |
 | **Ada Lovelace** (RTX 40xx/L40) | 8.9 | Supported by current branches | **13.x** and newer |
 | **Hopper** (H100/GH200) | 9.0 | Supported by current branches | **13.x** and newer |
 | **Blackwell** (B200/GB200) | 10.0 | Supported by current branches | **13.x** and newer |
