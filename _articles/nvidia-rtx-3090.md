@@ -203,10 +203,10 @@ mkdir -p ~/llm && cd ~/llm
 python3 -m venv .venv_llm_bench
 source ./.venv_llm_bench/bin/activate
 python -m pip install --upgrade pip
-pip install "torch==2.7.0" "torchvision==0.22.0" "torchaudio==2.7.0" --index-url https://download.pytorch.org/whl/cu128
-pip install "bitsandbytes==0.46.1" 
-pip install "transformers>=4.41" accelerate einops rich
-python3 -c "import torch; print(torch.__version__); print(torch.cuda.is_available());print(torch.cuda.get_device_name(0));"
+pip install "torch==2.7.1" "torchvision==0.22.1" "torchaudio==2.7.1" --index-url https://download.pytorch.org/whl/cu128
+pip install "transformers==4.57.3" accelerate einops rich
+pip install "bitsandbytes==0.46.1" "deepspeed==0.18.5"
+python3 -c "import torch, deepspeed; print(torch.__version__); print(torch.cuda.is_available());print(torch.cuda.get_device_name(0));print(deepspeed.__version__);"
 ```
 - Without quantization
 
