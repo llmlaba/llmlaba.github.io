@@ -28,6 +28,7 @@ It is also helpful to have external storage for LLMs, as each model may require 
 - [Qwen3 8b](https://huggingface.co/Qwen/Qwen3-8B-Base)
 - [Internlm3 8B](https://huggingface.co/internlm/internlm3-8b-instruct)
 - [PHI4](https://huggingface.co/microsoft/phi-4)
+- [Granite3.3 8B](https://huggingface.co/ibm-granite/granite-3.3-8b-base)
 
 #### Multimodal LLM
 - [Pixtral 12b](https://huggingface.co/mistral-community/pixtral-12b)
