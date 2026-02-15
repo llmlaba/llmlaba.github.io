@@ -27,7 +27,7 @@ images:
 ## Limitations
 - Ubuntu 20.04 only
 - This GPU is outdated; most tools must be built from source
-- Required external fun
+- Required external fan
 - PyTorch 2.2.0
 
 ## Test environment 
@@ -86,7 +86,7 @@ python -m pip install --upgrade pip
 git clone -b release/2.2 https://github.com/pytorch/pytorch.git
 cd ./pytorch
 ```
-- Compile PyTorch and install to virtalenv
+- Compile PyTorch and install to virtualenv
 
 ```bash
 pip install -r requirements.txt
@@ -98,7 +98,7 @@ USE_CUDA=1 python setup.py install
 cd ~/llm
 python3 -c "import torch; print(torch.__version__); print(torch.cuda.is_available());print(torch.cuda.get_device_name(0));"
 ```
-- Install LLM dependancies
+- Install LLM dependencies
 
 ```bash
 pip install "transformers==4.46.3" "accelerate==0.34.2" "tokenizers<0.21" "safetensors<0.5" "diffusers==0.34.0"

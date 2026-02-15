@@ -221,7 +221,7 @@ dependencies:
   - pip:
       - -r requirements.txt
 ```
-- File `requirements.txt` required to install pip dependancies
+- File `requirements.txt` required to install pip dependencies
 
 ```
 Flask==3.0.3

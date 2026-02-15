@@ -14,7 +14,7 @@ images:
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
-## Requirments
+## Requirements
 - Ubuntu 24.04
 - PyTorch 2.7.1
 - Python 3.12
@@ -65,7 +65,7 @@ nvcc --version
 ```
 
 ## Install PyTorch
-- Preapre python environment for CUDA:
+- Prepare Python environment for CUDA:
 
 ```bash
 mkdir -p ~/llm && cd ~/llm
@@ -82,13 +82,13 @@ python3 -c "import torch; print(torch.__version__); print(torch.cuda.is_availabl
 ```
 
 ## Build FlashAttention
-- Install build dependancies
+- Install build dependencies
 
 ```bash
 pip install setuptools wheel
 pip install packaging ninja
 ```
-- Compile FlashAttention and install to virtalenv
+- Compile FlashAttention and install to virtualenv
 
 ```bash
 MAX_JOBS=4 pip install "flash-attn==2.6.3" --no-build-isolation

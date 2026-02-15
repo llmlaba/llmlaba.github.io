@@ -32,7 +32,7 @@ brew install python@3.11
 
 ### Stable Diffusion v1.5
 
-- Preapre python environment for MPS:
+- Prepare Python environment for MPS:
 
 ```bash
 mkdir -p ~/llm && cd ~/llm

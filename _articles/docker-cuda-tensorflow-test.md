@@ -201,7 +201,7 @@ if __name__ == "__main__":
 #### PIP install GPT2 dependencies
 To run an LLM inside the Docker container provided by nvidia on Docker Hub, we need to install several additional libraries.
 
-- File `requirements.txt` required to install pip dependancies
+- File `requirements.txt` required to install pip dependencies
 
 ```
 Flask==2.2.5

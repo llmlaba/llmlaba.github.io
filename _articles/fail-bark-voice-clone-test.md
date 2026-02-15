@@ -27,7 +27,7 @@ categories: [fail]
 
 ## Test steps
 
-### Preapre python environment for ROCm:
+### Prepare Python environment for ROCm:
 
 - Prepare venv
 

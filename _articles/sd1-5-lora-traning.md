@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Stable Diffusion 1.5 LoRA Tranning Test"
+title: "Stable Diffusion 1.5 LoRA Training Test"
 date: 2025-09-30
 categories: [llm, software]
 
@@ -12,7 +12,7 @@ images:
 ---
 > Date: {{ page.date | date: "%d.%m.%Y" }}  
 
-# Stable Diffusion 1.5 LoRA Tranning Test
+# Stable Diffusion 1.5 LoRA Training Test
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
@@ -25,7 +25,7 @@ images:
 
 ## Steps
 
-### Preapre python environment for CUDA:
+### Prepare Python environment for CUDA:
 
 ```bash
 mkdir -p ~/lora && cd ~/lora
@@ -51,29 +51,29 @@ pip install "peft>=0.15.0"
 python3 -c "import torch; print(torch.__version__); print(torch.cuda.is_available());print(torch.cuda.get_device_name(0));"
 ```
 
-### Get the StableDiffusion 1.5
+### Get Stable Diffusion 1.5
 
 ```bash
 git lfs install
 git clone https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5 sd1.5
 ```
 
-### Prepare dataset
+### Prepare the dataset
 
-- Create png list from favorite movie
+- Create a PNG list from a favorite movie
 
 ```bash
 ffmpeg -i movie.mkv -vf "fps=1" f2/%06d.png
 ```
 
-- Create jsonl with metadata
+- Create a JSONL file with metadata
 
 ```jsonl
 {"file_name":"000134.png","text":"alpopo, cartoon hero, full body, looking left"}
 {"file_name":"000135.png","text":"alpopo, cartoon hero, full body, looking down"}
 ```
 
-### Run Stable diffusion LoRA traning
+### Run Stable Diffusion LoRA training
 
 ```bash
 export MODEL_DIR="/home/sysadmin/llm/sd1.5"

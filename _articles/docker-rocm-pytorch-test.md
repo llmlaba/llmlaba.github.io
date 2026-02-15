@@ -18,7 +18,7 @@ images:
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
-## Requirments 
+## Requirements
 - AMD Mi50/MI100 32Gb VRAM
 - Workstation 40 GB RAM, 500GB SSD, 750W Power supply 
 - Ubuntu 24.04 LTS

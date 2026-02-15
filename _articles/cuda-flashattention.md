@@ -24,7 +24,7 @@ If not exist check archive.org
 - [CUDA toolkit installer](https://developer.download.nvidia.com/compute/cuda/12.8.0/local_installers/cuda_12.8.0_570.86.10_linux.run)
 - [FlashAttention source code](https://github.com/Dao-AILab/flash-attention)
 
-## Requirments
+## Requirements
 - Ubuntu 24.04
 - PyTorch 2.7.1
 - Python 3.12
@@ -75,7 +75,7 @@ nvcc --version
 ```
 
 ## Install PyTorch
-- Preapre python environment for CUDA:
+- Prepare Python environment for CUDA:
 
 ```bash
 mkdir -p ~/llm && cd ~/llm

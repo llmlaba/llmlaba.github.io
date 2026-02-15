@@ -138,7 +138,7 @@ python test_cuda_mistral.py
 
 ### Stable Diffusion v1.5
 
-- Preapre python environment for CUDA:
+- Prepare Python environment for CUDA:
 
 ```bash
 mkdir -p ~/llm && cd ~/llm
@@ -196,7 +196,7 @@ git clone https://github.com/llmlaba/pp512-tg128-bench.git
 ```
 
 ### Run benchmark test
-- Preapre python environment for CUDA:
+- Prepare Python environment for CUDA:
 
 ```bash
 mkdir -p ~/llm && cd ~/llm
