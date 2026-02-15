@@ -169,7 +169,7 @@ image.save("test.png", format="PNG")
 [PyTorch pp512 and tg128 LLM Benchmark](/articles/pytorch-pp512-tg128-bench.html)
 
 ### Run test 
-> Check `nvidia-smi` during each test `while true; do nvidia-smi; sleep 1; done`
+> Check `nvidia-smi` during each test `watch -n 1 nvidia-smi`
 
 - With quantization
 

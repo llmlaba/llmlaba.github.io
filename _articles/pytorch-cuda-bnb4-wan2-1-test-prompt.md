@@ -205,7 +205,7 @@ export_to_video(result.frames[0], f"test_video_wan2.1_bnb4_{seed}.mp4", fps=16)
 ```
 
 ### Run test 
-> Check `nvidia-smi` during the test `while true; do nvidia-smi; sleep 1; done`
+> Check `nvidia-smi` during the test `watch -n 1 nvidia-smi`
 
 - Without quantization
 

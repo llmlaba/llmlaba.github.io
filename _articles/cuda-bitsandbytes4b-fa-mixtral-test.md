@@ -164,7 +164,7 @@ print(tokenizer.decode(output_ids[0], skip_special_tokens=True))
 ```
 
 ### Run test 
-> Check `nvidia-smi` during the test `while true; do nvidia-smi; sleep 1; done`
+> Check `nvidia-smi` during the test `watch -n 1 nvidia-smi`
 
 - With quantization 4bit and flash attention 2 (without FA2 we will have OOM)
 

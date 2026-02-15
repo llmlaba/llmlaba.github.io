@@ -158,7 +158,7 @@ image.save(f"test_image_qwen_{seed}.png", format="PNG")
 ```
 
 ### Run test 
-> Check `nvidia-smi` during the test `while true; do nvidia-smi; sleep 1; done`
+> Check `nvidia-smi` during the test `watch -n 1 nvidia-smi`
 
 - With quantization 4bit
 
