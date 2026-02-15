@@ -21,7 +21,7 @@ images:
 {% include gallery.html images=page.images gallery_id=page.title %}
 
 ## Limitations
-- Required SXM2 to PCIE adapter that looks ugly and not reliable
+- Requires an SXM2-to-PCIe adapter that looks ugly and is not reliable
 
 ## Test environment 
 - Workstation 40 GB RAM, 500GB SSD, 750W Power supply 
@@ -51,8 +51,8 @@ nvidia-smi
 clinfo
 ```
 
-## Check CUDA in python
-- Priparing PyTorch
+## Check CUDA in Python
+- Preparing PyTorch
 ```bash
 mkdir -p ~/llm && cd ~/llm
 python3 -m venv .venv_llm
@@ -62,7 +62,7 @@ pip install "torch==2.5.0" "torchvision==0.20.0" "torchaudio==2.5.0" --index-url
 pip install "bitsandbytes==0.44.1"
 python3 -c "import torch; print(torch.__version__); print(torch.cuda.is_available());print(torch.cuda.get_device_name(0));"
 ```
-- Expected responce
+- Expected response
 ```
 2.5.0+cu124
 True
@@ -73,7 +73,7 @@ Tesla V100-SXM2-16GB
 
 ### Mistral 7b
 
-- Preapre python environment for CUDA 12:
+- Prepare Python environment for CUDA 12:
 
 ```bash
 mkdir -p ~/llm && cd ~/llm
@@ -119,7 +119,7 @@ print(generator("Tell the story about sun.", max_new_tokens=120)[0]["generated_t
 
 ### Stable Diffusion v1.5
 
-- Preapre python environment for CUDA:
+- Prepare Python environment for CUDA:
 
 ```bash
 mkdir -p ~/llm && cd ~/llm

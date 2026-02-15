@@ -16,16 +16,16 @@ images:
 {% include gallery.html images=page.images gallery_id=page.title %}
 
 ## Hot links
-If not exist check archive.org  
+If links do not exist, check archive.org  
 - [Download driver](https://www.amd.com/en/support/downloads/drivers.html/accelerators/instinct/instinct-mi-series/instinct-mi50-32gb.html)
 - [Install installer](https://amdgpu-install.readthedocs.io/en/latest/install-prereq.html#installing-the-installer-package)
 - [Install driver option 1](https://amdgpu-install.readthedocs.io/en/latest/install-script.html)
 - [Install driver option 2](https://amdgpu-install.readthedocs.io/en/latest/install-installing.html#installing-the-all-open-use-case)
 
 ## Limitations
-- Linux only, there is no driver for windows
+- Linux only; there is no driver for Windows
 - This GPU is considered outdated; future versions of ROCm may drop support for it
-- Required external fun
+- Required external fan
 
 ## Test environment 
 - Workstation 40 GB RAM, 200GB SSD, 750W Power supply 
@@ -67,8 +67,8 @@ sudo /opt/rocm/bin/rocminfo
 sudo rocm-smi
 ```
 
-## Check ROCm in python
-- Priparing PyTorch
+## Check ROCm in Python
+- Preparing PyTorch
 ```bash
 mkdir -p ~/llm && cd ~/llm
 python3 -m venv .venv_llm
@@ -77,7 +77,7 @@ python -m pip install --upgrade pip
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm6.0
 python3 -c "import torch; print(torch.__version__); print(torch.cuda.is_available()); print(torch.version.hip);print(torch.cuda.get_device_name(0));"
 ```
-- Expected responce
+- Expected response
 ```
 2.4.1+rocm6.0
 True

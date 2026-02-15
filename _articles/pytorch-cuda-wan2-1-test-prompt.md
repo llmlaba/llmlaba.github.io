@@ -50,8 +50,8 @@ nvidia-smi
 clinfo
 ```
 
-## Check CUDA in python
-- Priparing PyTorch
+## Check CUDA in Python
+- Preparing PyTorch
 
 ```bash
 mkdir -p ~/llm && cd ~/llm
@@ -64,7 +64,7 @@ pip install transformers accelerate diffusers safetensors
 pip install ftfy opencv-python imageio imageio-ffmpeg
 python3 -c "import torch; print(torch.__version__); print(torch.cuda.is_available());print(torch.cuda.get_device_name(0));"
 ```
-- Expected responce
+- Expected response
 
 ```
 2.7.0+cu128

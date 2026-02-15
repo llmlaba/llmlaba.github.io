@@ -21,9 +21,9 @@ images:
 {% include gallery.html images=page.images gallery_id=page.title %}
 
 ## Limitations
-- Linux only, there is no driver for windows
-- This GPU is considered outdated; future versions of nvidia drivers may drop support for it
-- Required external fun
+- Linux only; there is no driver for Windows
+- This GPU is considered outdated; future versions of NVIDIA drivers may drop support for it
+- Required external fan
 
 ## Test environment 
 - Workstation 40 GB RAM, 200GB SSD, 750W Power supply 
@@ -53,8 +53,8 @@ nvidia-smi
 clinfo
 ```
 
-## Check CUDA in python
-- Priparing PyTorch
+## Check CUDA in Python
+- Preparing PyTorch
 ```bash
 mkdir -p ~/llm && cd ~/llm
 python3 -m venv .venv_llm
@@ -64,7 +64,7 @@ pip install "torch==2.5.0" "torchvision==0.20.0" "torchaudio==2.5.0" --index-url
 pip install "bitsandbytes==0.44.1"
 python3 -c "import torch; print(torch.__version__); print(torch.cuda.is_available());print(torch.cuda.get_device_name(0));"
 ```
-- Expected responce
+- Expected response
 ```
 2.5.0+cu124
 True
@@ -80,7 +80,7 @@ Tesla M10
 git lfs install
 git clone https://huggingface.co/mistralai/Mistral-7B-v0.1 mistral
 ```
-- Preapre python environment for CUDA 12:
+- Prepare Python environment for CUDA 12:
 ```bash
 mkdir -p ~/llm && cd ~/llm
 python3 -m venv .venv_llm_mistral
@@ -126,7 +126,7 @@ print(generator("Tell the story about sun.", max_new_tokens=120)[0]["generated_t
 git lfs install
 git clone https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5 sd1.5
 ```
-- Preapre python environment for CUDA:
+- Prepare Python environment for CUDA:
 
 ```bash
 mkdir -p ~/llm && cd ~/llm

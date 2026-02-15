@@ -23,10 +23,10 @@ images:
 {% include gallery.html images=page.images gallery_id=page.title %}
 
 ## Limitations
-- Linux only, there is no driver for windows
-- This GPU is considered outdated; future versions of nvidia drivers may drop support for it
-- Required external fun
-- BitsAndBytes 8bit quantization not supported
+- Linux only; there is no driver for Windows
+- This GPU is considered outdated; future versions of NVIDIA drivers may drop support for it
+- Required external fan
+- BitsAndBytes 8-bit quantization not supported
 
 ## Test environment 
 - Workstation 40 GB RAM, 500GB SSD, 750W Power supply 
@@ -58,8 +58,8 @@ nvidia-smi
 clinfo
 ```
 
-## Check CUDA in python
-- Priparing PyTorch
+## Check CUDA in Python
+- Preparing PyTorch
 
 ```bash
 mkdir -p ~/llm && cd ~/llm
@@ -70,7 +70,7 @@ pip install "torch==2.5.0" "torchvision==0.20.0" "torchaudio==2.5.0" --index-url
 pip install "bitsandbytes==0.44.1"
 python3 -c "import torch; print(torch.__version__); print(torch.cuda.is_available());print(torch.cuda.get_device_name(0));"
 ```
-- Expected responce
+- Expected response
 
 ```
 2.5.0+cu124
@@ -87,7 +87,7 @@ python -m bitsandbytes
 
 ### Mistral 7b
 
-- Preapre python environment for CUDA 12:
+- Prepare Python environment for CUDA 12:
 
 ```bash
 mkdir -p ~/llm && cd ~/llm

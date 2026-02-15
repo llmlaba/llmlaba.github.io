@@ -19,7 +19,7 @@ images:
 
 ## Limitations
 - Ubuntu Linux only
-- Reqquired DIY air duct
+- Required DIY air duct
 
 ## Test environment 
 - Mac Pro 7.1 Intel Xeon W-3235 64Gb RAM 1Tb SSD
@@ -99,8 +99,8 @@ clinfo
 sudo apt install -y python3-venv python3-dev git git-lfs
 ```
 
-## Check CUDA in python
-- Priparing PyTorch
+## Check CUDA in Python
+- Preparing PyTorch
 
 ```bash
 mkdir -p ~/llm && cd ~/llm
@@ -111,7 +111,7 @@ pip install "torch==2.5.0" "torchvision==0.20.0" "torchaudio==2.5.0" --index-url
 pip install "bitsandbytes==0.44.1"
 python3 -c "import torch; print(torch.__version__); print(torch.cuda.is_available());print(torch.cuda.get_device_name(0));"
 ```
-- Expected responce
+- Expected response
 
 ```
 2.5.0+cu124
@@ -128,7 +128,7 @@ python -m bitsandbytes
 
 ### Stable Diffusion XL
 
-- Preapre python environment for CUDA:
+- Prepare Python environment for CUDA:
 
 ```bash
 mkdir -p ~/llm && cd ~/llm

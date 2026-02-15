@@ -18,7 +18,7 @@ images:
 - [PyTorch 2.2.0](https://github.com/pytorch/pytorch/tree/release/2.2?tab=readme-ov-file#from-source)
 - [BitsAndBytes 0.44.1](https://github.com/bitsandbytes-foundation/bitsandbytes/blob/0.44.1/docs/source/installation.mdx)
 
-## Requirments
+## Requirements
 - Ubuntu 20.04
 - This GPU is outdated; most tools must be built from source
 - PyTorch 2.2.0
@@ -81,7 +81,7 @@ python -m pip install --upgrade pip
 git clone -b release/2.2 https://github.com/pytorch/pytorch.git
 cd ./pytorch
 ```
-- Compile PyTorch and install to virtalenv
+- Compile PyTorch and install to virtualenv
 
 ```bash
 pip install -r requirements.txt
@@ -119,7 +119,7 @@ matplotlib~=3.7.5
 EOF
 ```
 
-- Compile BitsAndBytes and install to virtalenv
+- Compile BitsAndBytes and install to virtualenv
 
 ```bash
 pip install -r requirements-cus.txt

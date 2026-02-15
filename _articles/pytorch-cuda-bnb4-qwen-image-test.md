@@ -51,8 +51,8 @@ clinfo
 sudo apt install -y python3-venv python3-dev git git-lfs
 ```
 
-## Check CUDA in python
-- Priparing PyTorch
+## Check CUDA in Python
+- Preparing PyTorch
 
 ```bash
 mkdir -p ~/llm && cd ~/llm
@@ -64,7 +64,7 @@ pip install "bitsandbytes==0.46.1"
 pip install transformers accelerate diffusers safetensors
 python3 -c "import torch; print(torch.__version__); print(torch.cuda.is_available());print(torch.cuda.get_device_name(0));"
 ```
-- Expected responce
+- Expected response
 
 ```
 2.7.0+cu128

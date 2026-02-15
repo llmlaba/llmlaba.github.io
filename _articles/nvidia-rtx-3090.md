@@ -26,7 +26,7 @@ images:
 {% include gallery.html images=page.images gallery_id=page.title %}
 
 ## Limitations
-- GPU are huge, make sure that you able to install it in your PC
+- GPUs are huge; make sure that you are able to install it in your PC
 
 ## Test environment 
 - Workstation 40 GB RAM, 500GB SSD, 750W Power supply 
@@ -58,8 +58,8 @@ nvidia-smi
 clinfo
 ```
 
-## Check CUDA in python
-- Priparing PyTorch
+## Check CUDA in Python
+- Preparing PyTorch
 
 ```bash
 mkdir -p ~/llm && cd ~/llm
@@ -70,7 +70,7 @@ pip install "torch==2.7.0" "torchvision==0.22.0" "torchaudio==2.7.0" --index-url
 pip install "bitsandbytes==0.46.1"
 python3 -c "import torch; print(torch.__version__); print(torch.cuda.is_available());print(torch.cuda.get_device_name(0));"
 ```
-- Expected responce
+- Expected response
 
 ```
 2.7.0+cu128
@@ -87,7 +87,7 @@ python -m bitsandbytes
 
 ### Mistral 7b
 
-- Preapre python environment for CUDA 12:
+- Prepare Python environment for CUDA 12:
 
 ```bash
 mkdir -p ~/llm && cd ~/llm
