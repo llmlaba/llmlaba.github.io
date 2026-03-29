@@ -12,22 +12,33 @@ images:
   - /assets/articles/sd-cpp-simple/4.jpg
   - /assets/articles/sd-cpp-simple/5.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # sd.cpp - run Stable Diffuision everywhere
 
-> sd.cpp is a universal solution for running quantized stable diffusion models on a wide range of hardware.
-
 {% include gallery.html images=page.images gallery_id=page.title %}
 
-## RUN Stable diffusion XL from scratch with sd.cpp runtime
+## Table of Contents
 
-> My test environment: Mac Pro 7.1 + NVIDIA CMP 170HX
+- [Overview](#overview)
+- [Instructions](#instructions)
 
-### Requirments 
+## Overview
+
+> sd.cpp is a universal solution for running quantized stable diffusion models on a wide range of hardware.
+
+## Requirments
 - PC 16 GB RAM, 500GB SSD
 - Ubuntu 24.04 LTS
 - NVIDIA GPU 10GB VRAM or higher
+
+## Test environment
+
+> My test environment: Mac Pro 7.1 + NVIDIA CMP 170HX
+
+## Instructions
+
+## RUN Stable diffusion XL from scratch with sd.cpp runtime
 
 ### Driver setup:
 - Install drivers **nvidia-driver-570**

@@ -8,11 +8,18 @@ images:
   - /assets/articles/cuda-bitsandbytes4b-fa-mixtral-test/1.jpg
   - /assets/articles/cuda-bitsandbytes4b-fa-mixtral-test/2.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # CUDA PyTorch BitsAndBytes FlashAttention2 Mixtral-8x7B Test
 
 {% include gallery.html images=page.images gallery_id=page.title %}
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
 
 ## Requirements
 - Ubuntu 24.04
@@ -22,12 +29,14 @@ images:
 - CUDA toolkit 12.8.0
 - NVIDIA GPU Ampere (24gb vram) or higher
 
-## Test environment 
-- Workstation 40 GB RAM, 500GB SSD, 750W Power supply 
+## Test environment
+- Workstation 40 GB RAM, 500GB SSD, 750W Power supply
 - Ubuntu 24.04 LTS HWE Kernel
 - Install python 3.12
 
 > My test environment: HP Z440 + NVIDIA RTX 3090
+
+## Instructions
 
 ## Ubuntu preparation
 

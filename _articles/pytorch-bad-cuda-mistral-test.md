@@ -4,13 +4,20 @@ title: "Mistral 7b CUDA low memory GPU PyTorch Test"
 date: 2025-06-14
 categories: [llm, software]
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
-# Mistral 7b Bad CUDA PyTorch Test 
+# Mistral 7b Bad CUDA PyTorch Test
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
-## Requirments 
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
+
+## Requirments
 - NVIDIA RTX 4070 8GB
 - Workstation 64 GB RAM, 200GB SSD
 - Windows 11
@@ -18,6 +25,8 @@ categories: [llm, software]
 - NVIDIA Driver 577
 
 > Memory on my gaming laptop is not sufficient for running Mistral 7b (requires 15GB VRAM), so I will try to use `device_map="auto"` and specify `offload_folder="offload"` as the directory for model offloading.
+
+## Instructions
 
 ## Steps
 

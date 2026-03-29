@@ -9,19 +9,28 @@ images:
   - /assets/articles/apple-m1-16gb/2.jpg
   - /assets/articles/apple-m1-16gb/3.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # Apple M1 16Gb Unified RAM
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
+
 ## Limitations
 - Apple MPS still about in beta in PyTorch
 
-## Test environment 
+## Test environment
 - MBP 16 inch 2021
 - Mac OS 15.5
 - Python 3.11
+
+## Instructions
 
 ## MacOS preparation
 ```bash

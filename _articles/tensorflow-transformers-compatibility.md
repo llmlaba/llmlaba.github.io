@@ -7,11 +7,17 @@ categories: [general]
 images:
   - /assets/articles/general/TF_logo.png
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # TensorFlow-friendly causal LMs in 🤗 Transformers 4.x
 
 {% include gallery.html images=page.images gallery_id=page.title %}
+
+## Table of Contents
+
+- [Overview](#overview)
+
+## Overview
 
 This table lists decoder-only (causal LM) model families that have **TensorFlow classes in Transformers 4.x** and publish **TensorFlow weights (`tf_model.h5`)** on the Hugging Face Hub.  
 If `tf_model.h5` is present for the checkpoint, you can load with `TFAutoModelForCausalLM.from_pretrained(...)` without converting from PyTorch.

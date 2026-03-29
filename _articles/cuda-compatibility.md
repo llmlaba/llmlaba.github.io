@@ -7,11 +7,17 @@ categories: [general]
 images:
   - /assets/articles/general/Logo_and_CUDA.png
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # NVIDIA GPU architectures, drivers, and CUDA — quick cheat sheet
 
 {% include gallery.html images=page.images gallery_id=page.title %}
+
+## Table of Contents
+
+- [Overview](#overview)
+
+## Overview
 
 The table below shows, for each NVIDIA architecture generation: its **Compute Capability (SM)**, the **last Linux driver branch** that still supports it, and the **newest compatible CUDA Toolkit** you can use.
 

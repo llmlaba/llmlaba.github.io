@@ -9,18 +9,27 @@ images:
   - /assets/articles/pytorch-cuda-bnb4-glm-image-test/2.jpg
   - /assets/articles/pytorch-cuda-bnb4-glm-image-test/3.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # GLM Image CUDA PyTorch BNB4 Test
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
-## Test environment 
-- Workstation 40 GB RAM, 500GB SSD, 750W Power supply 
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
+
+## Test environment
+- Workstation 40 GB RAM, 500GB SSD, 750W Power supply
 - Ubuntu 24.04 LTS HWE Kernel
 - Install python 3.12
 
 > My test environment: HP Z440 + NVIDIA RTX 3090
+
+## Instructions
 
 ## Ubuntu preparation
 

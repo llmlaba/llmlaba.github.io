@@ -19,22 +19,31 @@ images:
   - /assets/articles/nvidia-cmp-170hx/12.jpg
 
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # NVIDIA CMP 170HX GPU
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
+
 ## Limitations
 - 10 GB memory
 - Linux only; there is no driver for Windows
 
-## Test environment 
+## Test environment
 - Mac Pro 7.1 Intel Xeon W-3235 64Gb RAM 1Tb SSD
 - Ubuntu 24.04 LTS HWE Kernel
 - Install python 3.12
 
 > My test environment: MAC Pro 7.1 + NVIDIA CMP 170HX
+
+## Instructions
 
 ## Ubuntu preparation
 

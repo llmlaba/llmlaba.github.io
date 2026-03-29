@@ -9,22 +9,31 @@ images:
   - /assets/articles/docker-cuda-pytorch-test/2.jpg
   - /assets/articles/docker-cuda-pytorch-test/3.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # NVIDIA CUDA PyTorch in Docker Test
 
-> In this articale detailed described how to run PyTorch with nvidia cuda in docker container.  
-> Tested LLM Mistral 7b.  
+> In this articale detailed described how to run PyTorch with nvidia cuda in docker container.
+> Tested LLM Mistral 7b.
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
+
 ## Test environmet
 - NVIDIA Tesla V100
-- Workstation 40 GB RAM, 500GB SSD, 750W Power supply 
+- Workstation 40 GB RAM, 500GB SSD, 750W Power supply
 - Ubuntu 24.04 LTS
 - Docker CE
 
 > My test environment: HP Z440 + NVIDIA Tesla V100
+
+## Instructions
 
 ## Steps
 

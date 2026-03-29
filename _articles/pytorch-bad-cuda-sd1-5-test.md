@@ -7,13 +7,20 @@ categories: [llm, software]
 images:
   - /assets/articles/pytorch-bad-cuda-sd1-5-test/1.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
-# Stable Diffusion v1.5 Bad CUDA PyTorch Test 
+# Stable Diffusion v1.5 Bad CUDA PyTorch Test
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
-## Requirments 
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
+
+## Requirments
 - NVIDIA RTX 4070 8GB
 - Workstation 64 GB RAM, 200GB SSD
 - Windows 11
@@ -21,6 +28,8 @@ images:
 - NVIDIA Driver 577
 
 > Memory on my gaming laptop is not sufficient for running Stable Diffusion v1.5, so I will try to use `device_map="balanced"` and specify `offload_folder="offload"` as the directory for model offloading.
+
+## Instructions
 
 ## Steps
 

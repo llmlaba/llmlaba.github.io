@@ -10,11 +10,18 @@ images:
   - /assets/articles/pytorch-pp512-tg128-bench/3.jpg
   - /assets/articles/pytorch-pp512-tg128-bench/4.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # PyTorch pp512 and tg128 LLM Benchmark
 
 {% include gallery.html images=page.images gallery_id=page.title %}
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
 
 ## What is this project about?
 
@@ -47,11 +54,13 @@ images:
 
 ### Required Mistral 7b
 
-## Test environment 
+## Test environment
 - AMD Mi50 32Gb VRAM
-- Workstation 40 GB RAM, 200GB SSD, 750W Power supply 
+- Workstation 40 GB RAM, 200GB SSD, 750W Power supply
 - Ubuntu 24.04 LTS
 - Docker CE
+
+## Instructions
 
 ## Preparation
 

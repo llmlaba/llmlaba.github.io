@@ -8,17 +8,26 @@ images:
   - /assets/articles/pytorch-rocm-sd1-5-test/1.jpg
   - /assets/articles/pytorch-rocm-sd1-5-test/2.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
-# Stable Diffusion v1.5 ROCm PyTorch Test 
+# Stable Diffusion v1.5 ROCm PyTorch Test
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
-## Requirments 
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
+
+## Requirments
 - AMD Mi50/MI100 32Gb VRAM
-- Workstation 40 GB RAM, 200GB SSD, 750W Power supply 
+- Workstation 40 GB RAM, 200GB SSD, 750W Power supply
 - Ubuntu 24.04 LTS HWE Kernel
 - Install python 3.11 or 3.12
+
+## Instructions
 
 ## Steps
 

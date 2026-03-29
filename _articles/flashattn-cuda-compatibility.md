@@ -8,11 +8,17 @@ images:
   - /assets/articles/general/flashattention_logo.png
   - /assets/articles/general/Logo_and_CUDA.png
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # FlashAttention, NVIDIA GPU architectures, and CUDA — quick cheat sheet
 
 {% include gallery.html images=page.images gallery_id=page.title %}
+
+## Table of Contents
+
+- [Overview](#overview)
+
+## Overview
 
 The table below shows compatibility FlashAttention intermidiate versions for each NVIDIA architecture generation.
 

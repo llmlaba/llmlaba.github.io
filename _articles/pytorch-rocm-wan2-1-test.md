@@ -4,15 +4,24 @@ title: "WAN 2.1 1.3b diffusers ROCm PyTorch Test"
 date: 2025-08-11
 categories: [draft]
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
-# WAN 2.1 1.3b diffusers ROCm PyTorch Test 
+# WAN 2.1 1.3b diffusers ROCm PyTorch Test
 
-## Requirments 
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
+
+## Requirments
 - AMD MI200 64Gb VRAM
-- Workstation 40 GB RAM, 200GB SSD, 750W Power supply 
+- Workstation 40 GB RAM, 200GB SSD, 750W Power supply
 - Ubuntu 24.04 LTS HWE Kernel
 - Install python 3.11 or 3.12
+
+## Instructions
 
 ## Steps
 

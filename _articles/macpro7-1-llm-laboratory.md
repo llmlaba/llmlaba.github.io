@@ -11,22 +11,31 @@ images:
   - /assets/articles/macpro7-1-llm-laboratory/4.jpg
   - /assets/articles/macpro7-1-llm-laboratory/5.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # Mac Pro 7.1 LLM Laboratory
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
+
 ## Limitations
 - Ubuntu Linux only
 - Required DIY air duct
 
-## Test environment 
+## Test environment
 - Mac Pro 7.1 Intel Xeon W-3235 64Gb RAM 1Tb SSD
 - Ubuntu 24.04 LTS HWE Kernel
 - Install python 3.12
 
 > Tested GPU Nvidia Tesla P100
+
+## Instructions
 
 ## Ubuntu preparation
 

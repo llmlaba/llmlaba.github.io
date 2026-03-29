@@ -7,11 +7,18 @@ categories: [llm, software]
 images:
   - /assets/articles/cuda-kepler-bitsandbytes/1.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # Compilation PyTorch BitsAndBytes for CUDA 11.4 (Kepler)
 
 {% include gallery.html images=page.images gallery_id=page.title %}
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
 
 ## Hot links
 - [CUDA Toolkit](https://developer.nvidia.com/cuda-11-4-4-download-archive)
@@ -24,13 +31,15 @@ images:
 - PyTorch 2.2.0
 - Python 3.8
 
-## Test environment 
-- Workstation 40 GB RAM, 200GB SSD, 750W Power supply 
-- Ubuntu 20.04 
+## Test environment
+- Workstation 40 GB RAM, 200GB SSD, 750W Power supply
+- Ubuntu 20.04
 - Install python 3.8
 - NVIDIA Tesla K80
 
 > My test environment: HP Z440 + NVIDIA Tesla K80
+
+## Instructions
 
 ## Ubuntu preparation
 
