@@ -4,13 +4,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build:css": "tailwindcss -i ./src/css/input.css -o ./assets/css/main.css --minify",
-    "build:js": "webpack --mode production",
-    "build:front": "npm run build:css && npm run build:js",
+    "build:front": "webpack --mode production",
     "build": "npm run build:front && bundle exec jekyll build",
-    "dev:css": "tailwindcss -i ./src/css/input.css -o ./assets/css/main.css --watch",
+    "dev:front": "webpack --watch --mode development",
     "dev:jekyll": "bundle exec jekyll serve --livereload --host 0.0.0.0",
-    "dev": "concurrently \"npm run dev:css\" \"npm run dev:jekyll\""
+    "dev": "concurrently \"npm run dev:front\" \"npm run dev:jekyll\""
   },
   "devDependencies": {
     "tailwindcss": "^3.4.0",
