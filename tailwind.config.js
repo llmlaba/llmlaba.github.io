@@ -17,7 +17,7 @@ module.exports = {
           700: '#1c1c1c',
           600: '#242424',
         },
-        accent: '#76b900',
+        accent: '#e05252',
       },
       fontFamily: {
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],

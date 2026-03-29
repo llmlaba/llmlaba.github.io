@@ -12,5 +12,7 @@ collections:
   news:
     output: true
 
+github_repo: "llmlaba/llmlaba.github.io"
+
 plugins:
   - jekyll-sitemap
