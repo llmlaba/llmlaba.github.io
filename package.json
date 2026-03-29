@@ -1,0 +1,30 @@
+{
+  "name": "llmlaba-github-io",
+  "description": "LLM Laboratory — Jekyll site with Tailwind CSS + Webpack + GLightbox",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/css/input.css -o ./assets/css/main.css --minify",
+    "build:js": "webpack --mode production",
+    "build:front": "npm run build:css && npm run build:js",
+    "build": "npm run build:front && bundle exec jekyll build",
+    "dev:css": "tailwindcss -i ./src/css/input.css -o ./assets/css/main.css --watch",
+    "dev:jekyll": "bundle exec jekyll serve --livereload --host 0.0.0.0",
+    "dev": "concurrently \"npm run dev:css\" \"npm run dev:jekyll\""
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "postcss": "^8.4.0",
+    "autoprefixer": "^10.4.0",
+    "webpack": "^5.90.0",
+    "webpack-cli": "^5.1.0",
+    "css-loader": "^6.10.0",
+    "postcss-loader": "^8.1.0",
+    "mini-css-extract-plugin": "^2.8.0",
+    "concurrently": "^8.2.0",
+    "cross-env": "^7.0.3"
+  },
+  "dependencies": {
+    "glightbox": "^3.3.0"
+  }
+}

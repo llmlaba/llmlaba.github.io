@@ -1,62 +1,83 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: 'en-US' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} — {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
+  {% seo %}
+  {% include head-custom.html %}
+</head>
+<body class="bg-surface-900 text-gray-100 min-h-screen flex flex-col">
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,maximum-scale=2">
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
+  <!-- TOP NAV BAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 h-14 bg-surface-800 border-b border-gray-800 flex items-center px-4 gap-4">
+    <a href="{{ '/' | absolute_url }}" class="text-white font-bold text-lg tracking-tight hover:text-accent transition-colors">
+      {{ site.title }}
+    </a>
+    <a href="{{ '/about' | relative_url }}" class="text-gray-400 hover:text-white text-sm transition-colors">About</a>
+    <button id="mobile-menu-btn" class="ml-auto lg:hidden text-gray-400 hover:text-white text-xl">&#9776;</button>
+  </header>
 
+  <div class="flex pt-14 flex-1">
 
-    <!-- gallery library -->
-    <link rel="stylesheet" href="/assets/css/stile.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-    <script defer>
-      document.addEventListener('DOMContentLoaded', () => GLightbox({ selector: '.glightbox' }));
-    </script>
+    <!-- SIDEBAR -->
+    <nav id="sidebar" class="w-64 shrink-0 fixed top-14 bottom-0 left-0 overflow-y-auto
+                              bg-surface-800 border-r border-gray-800 px-3 py-6
+                              hidden lg:block">
+      {% if site.articles %}
+      <div class="mb-6">
+        <p class="text-xs font-semibold uppercase tracking-widest text-gray-500 px-3 mb-2">Articles</p>
+        {% assign sorted_articles = site.articles | sort: 'title' %}
+        {% for article in sorted_articles %}
+        <a href="{{ article.url | relative_url }}"
+           class="block px-3 py-1.5 rounded text-sm transition-colors
+                  {% if page.url == article.url %}bg-surface-700 text-white{% else %}text-gray-400 hover:text-white hover:bg-surface-700{% endif %}">
+          {{ article.title }}
+        </a>
+        {% endfor %}
+      </div>
+      {% endif %}
 
-{% seo %}
-    {% include head-custom.html %}
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          {% if site.github.is_project_page %}
-            <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
-          {% endif %}
-
-          <h1 id="project_title"><a href="{{ '/' | absolute_url }}" style="color:white">{{ site.title | default: site.github.repository_name }}</a></h1>
-          <!--<h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>-->
-
-          {% if site.show_downloads %}
-            <section id="downloads">
-              <a class="zip_download_link" href="{{ site.github.zip_url }}">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="{{ site.github.tar_url }}">Download this project as a tar.gz file</a>
-            </section>
-          {% endif %}
-        </header>
-    </div>
+      {% if site.news %}
+      <div class="mb-6">
+        <p class="text-xs font-semibold uppercase tracking-widest text-gray-500 px-3 mb-2">News</p>
+        {% for item in site.news %}
+        <a href="{{ item.url | relative_url }}"
+           class="block px-3 py-1.5 rounded text-sm transition-colors
+                  {% if page.url == item.url %}bg-surface-700 text-white{% else %}text-gray-400 hover:text-white hover:bg-surface-700{% endif %}">
+          {{ item.title }}
+        </a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </nav>
 
     <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+    <main class="flex-1 lg:ml-64 px-6 lg:px-12 py-10 min-w-0">
+      <article class="prose prose-invert prose-code:font-mono max-w-4xl">
         {{ content }}
-      </section>
-    </div>
+      </article>
+    </main>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        {% if site.github.is_project_page %}
-        <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a> by {{ site.owner }}</p>
-      </footer>
-    </div>
-  </body>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="lg:ml-64 border-t border-gray-800 px-6 py-4 text-sm text-gray-500">
+    {{ site.title }} — Published with
+    <a href="https://pages.github.com" class="hover:text-white transition-colors">GitHub Pages</a>
+    by {{ site.owner }}
+  </footer>
+
+  <script src="{{ '/assets/js/bundle.js' | relative_url }}"></script>
+
+  <!-- Mobile sidebar toggle -->
+  <script>
+    document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+      document.getElementById('sidebar').classList.toggle('hidden');
+    });
+  </script>
+
+</body>
 </html>
