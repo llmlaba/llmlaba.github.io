@@ -113,7 +113,8 @@
             <div class="article-card-thumb">
               {% if article.images.size > 0 %}
               <img src="{{ article.images[0] | relative_url }}"
-                   alt="{{ article.title }}">
+                   alt="{{ article.title }}"
+                   loading="lazy">
               {% else %}
               <div class="article-card-thumb-placeholder">
                 <img src="{{ '/assets/icon.png' | relative_url }}" alt="{{ site.title }}" class="w-10 h-10 opacity-20">
