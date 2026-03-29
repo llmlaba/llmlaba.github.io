@@ -73,7 +73,10 @@
     <div class="flex-1 lg:ml-60 xl:ml-64 flex flex-col min-w-0">
 
       <!-- Hero banner -->
-      <div class="h-16 bg-gradient-to-r from-surface-900 via-surface-800 to-surface-900 border-b border-gray-800 flex items-end px-6 lg:px-8 pb-0">
+      <div class="relative h-40 border-b border-gray-800 overflow-hidden bg-surface-900">
+        <div class="absolute inset-0"
+             style="background-image: url('{{ '/assets/home.svg' | relative_url }}'); background-repeat: repeat-x; background-size: auto 100%;">
+        </div>
       </div>
 
       <!-- Category title + grid -->
