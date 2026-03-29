@@ -88,7 +88,64 @@ document.addEventListener('DOMContentLoaded', () => {
   // ─── Tabs ─────────────────────────────────────────────────────────────────
   initTabs();
 
+  // ─── Home: category filter ────────────────────────────────────────────────
+  initHomeFilter();
+
 });
+
+// ─── Home filter ─────────────────────────────────────────────────────────────
+
+const CAT_LABELS = {
+  all:      'All Articles',
+  llm:      'LLM / Software',
+  software: 'LLM / Software',
+  hardware: 'GPU / Hardware',
+  gpu:      'GPU / Hardware',
+  general:  'General Reference',
+  project:  'Projects',
+  issue:    'Known Issues',
+  fail:     'Failed Tests',
+};
+
+function initHomeFilter() {
+  const links = document.querySelectorAll('.home-cat-link');
+  if (links.length === 0) return;
+
+  // Restore category from URL hash
+  const hash = window.location.hash.replace('#', '');
+  if (hash && hash !== 'all') applyFilter(hash);
+
+  links.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      applyFilter(link.dataset.cat);
+      // Close mobile drawer if open
+      document.getElementById('mobile-drawer')?.classList.add('hidden');
+      document.getElementById('mobile-overlay')?.classList.add('hidden');
+    });
+  });
+}
+
+function applyFilter(cat) {
+  // Show/hide cards
+  document.querySelectorAll('.article-card').forEach((card) => {
+    const cats = card.dataset.categories.split(' ');
+    const visible = cat === 'all' || cats.includes(cat);
+    card.style.display = visible ? '' : 'none';
+  });
+
+  // Update active link (both desktop sidebar and mobile drawer)
+  document.querySelectorAll('.home-cat-link').forEach((link) => {
+    link.classList.toggle('active', link.dataset.cat === cat);
+  });
+
+  // Update title
+  const titleEl = document.getElementById('home-category-title');
+  if (titleEl) titleEl.textContent = CAT_LABELS[cat] || cat;
+
+  // Update URL hash
+  history.replaceState(null, '', cat === 'all' ? location.pathname : '#' + cat);
+}
 
 // ─── Tab logic ───────────────────────────────────────────────────────────────
 
