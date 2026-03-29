@@ -10,23 +10,32 @@ images:
   - /assets/articles/llama-cpp-simple/2.jpg
   - /assets/articles/llama-cpp-simple/1.gif
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
-# llama.cpp - run LLM everywhere 
+# llama.cpp - run LLM everywhere
 
 > llama.cpp is a universal solution for running quantized LLM models on a wide range of hardware.
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
-## RUN LLM Mistral from scratch with llama.cpp runtime
+## Table of Contents
 
-> My test environment: HP ProDesk 405 G5
+- [Overview](#overview)
+- [Instructions](#instructions)
 
-### Requirments 
+## Overview
+
+## Requirments
 - PC 16 GB RAM, 200GB SSD
 - Ubuntu 24.04 LTS
 - CPU that support AVX/AVX2/AVX512
 - Docker CE for containerised run
+
+> My test environment: HP ProDesk 405 G5
+
+## Instructions
+
+## RUN LLM Mistral from scratch with llama.cpp runtime
 
 ### Get the most popular LLM Mistral
 ```bash

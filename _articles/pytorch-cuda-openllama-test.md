@@ -8,22 +8,31 @@ images:
   - /assets/articles/pytorch-cuda-openllama-test/1.jpg
   - /assets/articles/pytorch-cuda-openllama-test/2.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
-# Open (Fake) Llama 7b CUDA PyTorch Test 
+# Open (Fake) Llama 7b CUDA PyTorch Test
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
-# Notes:
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
+
+## Notes
 > It is not a real Llama, it is just some model that uses outdated llama python stack.
 > The name Open Llama not related to Llama in any way.
 
-## Test environment 
-- Workstation 40 GB RAM, 500GB SSD, 750W Power supply 
+## Test environment
+- Workstation 40 GB RAM, 500GB SSD, 750W Power supply
 - Ubuntu 24.04 LTS HWE Kernel
 - Install python 3.12
 
 > My test environment: HP Z440 + NVIDIA RTX 3090
+
+## Instructions
 
 ## Ubuntu preparation
 

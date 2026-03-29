@@ -9,22 +9,31 @@ images:
   - /assets/articles/docker-rocm-tensorflow-test/2.jpg
   - /assets/articles/docker-rocm-tensorflow-test/3.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # AMD ROCm TensorFlow in Docker Test
 
-> In this article detailed described how to run TensorFlow with AMD ROCm in docker container.  
-> Tested LLM GPT2.  
+> In this article detailed described how to run TensorFlow with AMD ROCm in docker container.
+> Tested LLM GPT2.
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
-## Requirements 
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
+
+## Requirements
 - AMD Mi50/MI100 32Gb VRAM
-- Workstation 40 GB RAM, 500GB SSD, 750W Power supply 
+- Workstation 40 GB RAM, 500GB SSD, 750W Power supply
 - Ubuntu 24.04 LTS
 - Docker CE
 
 > My test environment: HP Z440 + AMD Mi50 32gb
+
+## Instructions
 
 ## Steps
 

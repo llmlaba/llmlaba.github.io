@@ -8,11 +8,17 @@ images:
   - /assets/articles/general/Logo_and_CUDA.png
   - /assets/articles/general/PyTorch_logo.jpeg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # CUDA & PyTorch Compatibility by Compute Capability (CC)
 
 {% include gallery.html images=page.images gallery_id=page.title %}
+
+## Table of Contents
+
+- [Overview](#overview)
+
+## Overview
 
 This cheat sheet maps **Compute Capability (CC)** → **newest usable CUDA Toolkit** → **a recent PyTorch version with official wheels** → **ready-to-copy pip command**.
 

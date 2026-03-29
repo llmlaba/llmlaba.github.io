@@ -7,17 +7,26 @@ categories: [llm, software]
 images:
   - /assets/articles/pytorch-rocm-mistral-test/1.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
-# Mistral 7b ROCm PyTorch Test 
+# Mistral 7b ROCm PyTorch Test
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
-## Requirments 
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
+
+## Requirments
 - AMD Mi50/MI100 32Gb VRAM
-- Workstation 40 GB RAM, 200GB SSD, 750W Power supply 
+- Workstation 40 GB RAM, 200GB SSD, 750W Power supply
 - Ubuntu 24.04 LTS HWE Kernel
 - Install python 3.11 or 3.12
+
+## Instructions
 
 ## Steps
 

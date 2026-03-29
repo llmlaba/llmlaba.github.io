@@ -10,29 +10,38 @@ images:
   - /assets/articles/pytorch-cuda-bnb4-wan2-1-test-prompt/3.jpg
   - /assets/articles/pytorch-cuda-bnb4-wan2-1-test-prompt/4.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # WAN 2.1 1.3b diffusers CUDA PyTorch BNB4 Test
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
-{% include video.html 
+{% include video.html
     autoplay=false
-    src="/assets/articles/pytorch-cuda-bnb4-wan2-1-test-prompt/1.mp4" 
-    src_webm="/assets/articles/pytorch-cuda-bnb4-wan2-1-test-prompt/1.webm" 
+    src="/assets/articles/pytorch-cuda-bnb4-wan2-1-test-prompt/1.mp4"
+    src_webm="/assets/articles/pytorch-cuda-bnb4-wan2-1-test-prompt/1.webm"
 %}
-{% include video.html 
+{% include video.html
     autoplay=false
-    src="/assets/articles/pytorch-cuda-bnb4-wan2-1-test-prompt/2.mp4" 
-    src_webm="/assets/articles/pytorch-cuda-bnb4-wan2-1-test-prompt/2.webm" 
+    src="/assets/articles/pytorch-cuda-bnb4-wan2-1-test-prompt/2.mp4"
+    src_webm="/assets/articles/pytorch-cuda-bnb4-wan2-1-test-prompt/2.webm"
 %}
 
-## Test environment 
-- Workstation 40 GB RAM, 500GB SSD, 750W Power supply 
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
+
+## Test environment
+- Workstation 40 GB RAM, 500GB SSD, 750W Power supply
 - Ubuntu 24.04 LTS HWE Kernel
 - Install python 3.12
 
 > My test environment: HP Z440 + NVIDIA RTX 3090
+
+## Instructions
 
 ## Ubuntu preparation
 

@@ -10,18 +10,27 @@ images:
   - /assets/articles/sd1-5-lora-traning/3.jpg
   - /assets/articles/sd1-5-lora-traning/4.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # Stable Diffusion 1.5 LoRA Training Test
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
-## Test environment 
-- Workstation 40 GB RAM, 500GB SSD, 750W Power supply 
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
+
+## Test environment
+- Workstation 40 GB RAM, 500GB SSD, 750W Power supply
 - Ubuntu 24.04 LTS HWE Kernel
 - Install python 3.12
 
 > My test environment: HP Z440 + NVIDIA Tesla P100
+
+## Instructions
 
 ## Steps
 

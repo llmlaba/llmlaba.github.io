@@ -1,7 +1,7 @@
 theme: jekyll-theme-slate
-title: [LLM Laboratory]
-description: [Home Large Language Models research laboratory]
-owner: [Dmitrii Kostakov]
+title: LLM Laboratory
+description: Home Large Language Models research laboratory
+owner: Dmitrii Kostakov
 
 url: "https://llmlaba.com"
 baseurl: ""
@@ -9,6 +9,10 @@ baseurl: ""
 collections:
   articles:
     output: true
+  news:
+    output: true
+
+github_repo: "llmlaba/llmlaba.github.io"
 
 plugins:
   - jekyll-sitemap

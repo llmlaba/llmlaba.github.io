@@ -12,18 +12,27 @@ images:
   - /assets/articles/sd15-sd20-sdxl-test/5.jpg
   - /assets/articles/sd15-sd20-sdxl-test/6.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # Stable Diffusion 1.5 vs 2.0 vs XL Test
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
-## Test environment 
-- Workstation 40 GB RAM, 500GB SSD, 750W Power supply 
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
+
+## Test environment
+- Workstation 40 GB RAM, 500GB SSD, 750W Power supply
 - Ubuntu 24.04 LTS HWE Kernel
 - Install python 3.12
 
 > My test environment: HP Z440 + NVIDIA RTX 3090
+
+## Instructions
 
 ## Steps
 

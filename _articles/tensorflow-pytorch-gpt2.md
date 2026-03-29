@@ -10,13 +10,20 @@ images:
   - /assets/articles/tensorflow-pytorch-gpt2/3.jpg
   - /assets/articles/tensorflow-pytorch-gpt2/4.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # TensorFlow vs PyTorch GPT2
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
-## Test environment 
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
+
+## Test environment
 - NVIDIA GPU 8GB, Maxwell or higher
 - Workstation 40 GB RAM, 200GB SSD
 - Ubuntu 24.04
@@ -24,6 +31,8 @@ images:
 - NVIDIA Driver 570
 
 > My test environment: HP Z440
+
+## Instructions
 
 ## Steps
 

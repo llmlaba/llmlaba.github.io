@@ -1,0 +1,101 @@
+{% assign llm_articles   = site.articles | where_exp: "a", "a.categories contains 'llm'"      | sort: 'title' %}
+{% assign hw_articles    = site.articles | where_exp: "a", "a.categories contains 'hardware'"  | sort: 'title' %}
+{% assign gen_articles   = site.articles | where_exp: "a", "a.categories contains 'general'"   | sort: 'title' %}
+{% assign proj_articles  = site.articles | where_exp: "a", "a.categories contains 'project'"   | sort: 'title' %}
+{% assign issue_articles = site.articles | where_exp: "a", "a.categories contains 'issue'"     | sort: 'title' %}
+{% assign fail_articles  = site.articles | where_exp: "a", "a.categories contains 'fail'"      | sort: 'title' %}
+
+<div class="sidebar-nav py-3">
+
+  {% if llm_articles.size > 0 %}
+  <div class="sidebar-group">
+    <button class="sidebar-group-btn" type="button">
+      <span>LLM / Software</span>
+      <span class="sidebar-chevron">&#8250;</span>
+    </button>
+    <div class="sidebar-group-items">
+      {% for article in llm_articles %}
+      <a href="{{ article.url | relative_url }}"
+         class="sidebar-link{% if page.url == article.url %} active{% endif %}">
+        {{ article.title }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if hw_articles.size > 0 %}
+  <div class="sidebar-group">
+    <button class="sidebar-group-btn" type="button">
+      <span>GPU / Hardware</span>
+      <span class="sidebar-chevron">&#8250;</span>
+    </button>
+    <div class="sidebar-group-items">
+      {% for article in hw_articles %}
+      <a href="{{ article.url | relative_url }}"
+         class="sidebar-link{% if page.url == article.url %} active{% endif %}">
+        {{ article.title }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if gen_articles.size > 0 %}
+  <div class="sidebar-group">
+    <button class="sidebar-group-btn" type="button">
+      <span>Reference</span>
+      <span class="sidebar-chevron">&#8250;</span>
+    </button>
+    <div class="sidebar-group-items">
+      {% for article in gen_articles %}
+      <a href="{{ article.url | relative_url }}"
+         class="sidebar-link{% if page.url == article.url %} active{% endif %}">
+        {{ article.title }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if proj_articles.size > 0 %}
+  <div class="sidebar-group">
+    <button class="sidebar-group-btn" type="button">
+      <span>Projects</span>
+      <span class="sidebar-chevron">&#8250;</span>
+    </button>
+    <div class="sidebar-group-items">
+      {% for article in proj_articles %}
+      <a href="{{ article.url | relative_url }}"
+         class="sidebar-link{% if page.url == article.url %} active{% endif %}">
+        {{ article.title }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if issue_articles.size > 0 or fail_articles.size > 0 %}
+  <div class="sidebar-group">
+    <button class="sidebar-group-btn" type="button">
+      <span>Issues &amp; Fails</span>
+      <span class="sidebar-chevron">&#8250;</span>
+    </button>
+    <div class="sidebar-group-items">
+      {% for article in issue_articles %}
+      <a href="{{ article.url | relative_url }}"
+         class="sidebar-link{% if page.url == article.url %} active{% endif %}">
+        {{ article.title }}
+      </a>
+      {% endfor %}
+      {% for article in fail_articles %}
+      <a href="{{ article.url | relative_url }}"
+         class="sidebar-link{% if page.url == article.url %} active{% endif %}">
+        {{ article.title }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+</div>

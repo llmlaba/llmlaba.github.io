@@ -14,23 +14,32 @@ images:
   - /assets/articles/nvidia-tesla-m10/7.jpg
   - /assets/articles/nvidia-tesla-m10/8.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
-# NVIDIA Tesla M10 GPU 
+# NVIDIA Tesla M10 GPU
 
 {% include gallery.html images=page.images gallery_id=page.title %}
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
 
 ## Limitations
 - Linux only; there is no driver for Windows
 - This GPU is considered outdated; future versions of NVIDIA drivers may drop support for it
 - Required external fan
 
-## Test environment 
-- Workstation 40 GB RAM, 200GB SSD, 750W Power supply 
+## Test environment
+- Workstation 40 GB RAM, 200GB SSD, 750W Power supply
 - Ubuntu 24.04 LTS HWE Kernel
 - Install python 3.12
 
 > My test environment: HP Z440
+
+## Instructions
 
 ## Ubuntu preparation
 ```bash

@@ -8,11 +8,18 @@ images:
   - /assets/articles/rag-searchkit/1.jpg
   - /assets/articles/rag-searchkit/2.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # LLM semantic search
 
 {% include gallery.html images=page.images gallery_id=page.title %}
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
 
 ## Description
 
@@ -37,6 +44,8 @@ images:
 - Python 3.11/3.12
 - Ubuntu 24.04
 - GPU 4Gb VRAM - CUDA 5, ROCm 6
+
+## Instructions
 
 ## Preparetion
 

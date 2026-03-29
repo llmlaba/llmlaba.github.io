@@ -7,14 +7,21 @@ categories: [llm, software]
 images:
   - /assets/articles/rocm-bitsandbytes/1.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
-# Compilation BitsAndBytes for ROCm 6.2 
+# Compilation BitsAndBytes for ROCm 6.2
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
+
 ## Hot links
-If not exist check archive.org  
+If not exist check archive.org
 - [Download driver](https://www.amd.com/en/support/downloads/previous-drivers.html/accelerators/instinct/instinct-mi-series/instinct-mi50.html)
 - [Install installer](https://amdgpu-install.readthedocs.io/en/latest/install-prereq.html#installing-the-installer-package)
 - [BitsAndBytes 0.43.3.dev0 ROCM](https://github.com/ROCm/bitsandbytes/tree/rocm_enabled_multi_backend)
@@ -24,12 +31,14 @@ If not exist check archive.org
 - PyTorch 2.5.1+rocm6.2
 - Python 3.10
 
-## Test environment 
-- Workstation 40 GB RAM, 500GB SSD, 750W Power supply 
-- Ubuntu 22.04 
+## Test environment
+- Workstation 40 GB RAM, 500GB SSD, 750W Power supply
+- Ubuntu 22.04
 - AMD Mi50
 
 > My test environment: HP Z440 + AMD Mi50
+
+## Instructions
 
 ## Ubuntu preparation
 

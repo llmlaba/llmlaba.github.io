@@ -13,17 +13,26 @@ images:
   - /assets/articles/rocm-bitsandbytes-mistral-test/6.jpg
   - /assets/articles/rocm-bitsandbytes-mistral-test/7.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # ROCm PyTorch BitsAndBytes Mistral Test
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
-## Requirments 
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
+
+## Requirments
 - AMD Mi50 32Gb VRAM
-- Workstation 40 GB RAM, 500GB SSD, 750W Power supply 
+- Workstation 40 GB RAM, 500GB SSD, 750W Power supply
 - Ubuntu 22.04 LTS
 - Python 3.10
+
+## Instructions
 
 ## TESTs
 

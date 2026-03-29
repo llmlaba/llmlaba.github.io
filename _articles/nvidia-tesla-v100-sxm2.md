@@ -14,21 +14,30 @@ images:
   - /assets/articles/nvidia-tesla-v100-sxm2/7.jpg
   - /assets/articles/nvidia-tesla-v100-sxm2/8.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # NVIDIA Tesla V100 GPU SXM2
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
+
 ## Limitations
 - Requires an SXM2-to-PCIe adapter that looks ugly and is not reliable
 
-## Test environment 
-- Workstation 40 GB RAM, 500GB SSD, 750W Power supply 
+## Test environment
+- Workstation 40 GB RAM, 500GB SSD, 750W Power supply
 - Ubuntu 24.04 LTS HWE Kernel
 - Python 3.12
 
 > My test environment: HP Z440 + NVIDIA Tesla V100 SXM2
+
+## Instructions
 
 ## Ubuntu preparation
 ```bash

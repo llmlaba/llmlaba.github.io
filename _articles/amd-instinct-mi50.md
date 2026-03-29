@@ -9,14 +9,21 @@ images:
   - /assets/articles/amd-instinct-mi50/2.jpg
   - /assets/articles/amd-instinct-mi50/3.jpg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
-# AMD Instinct Mi50 GPU 
+# AMD Instinct Mi50 GPU
 
 {% include gallery.html images=page.images gallery_id=page.title %}
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
+
 ## Hot links
-If links do not exist, check archive.org  
+If links do not exist, check archive.org
 - [Download driver](https://www.amd.com/en/support/downloads/drivers.html/accelerators/instinct/instinct-mi-series/instinct-mi50-32gb.html)
 - [Install installer](https://amdgpu-install.readthedocs.io/en/latest/install-prereq.html#installing-the-installer-package)
 - [Install driver option 1](https://amdgpu-install.readthedocs.io/en/latest/install-script.html)
@@ -27,12 +34,14 @@ If links do not exist, check archive.org
 - This GPU is considered outdated; future versions of ROCm may drop support for it
 - Required external fan
 
-## Test environment 
-- Workstation 40 GB RAM, 200GB SSD, 750W Power supply 
+## Test environment
+- Workstation 40 GB RAM, 200GB SSD, 750W Power supply
 - Ubuntu 24.04 LTS HWE Kernel
 - Install python 3.12
 
 > My test environment: HP Z440
+
+## Instructions
 
 ## Ubuntu preparation
 ```bash
@@ -85,7 +94,6 @@ True
 AMD Instinct MI50/MI60
 ```
 
-## Done!
-> Your workstation ready to test most common models from huggingface.co 
+> Your workstation ready to test most common models from huggingface.co
 
 > For example: [Mistral 7b ROCm PyTorch Test](/articles/pytorch-rocm-mistral-test.html)

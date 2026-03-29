@@ -4,9 +4,15 @@ title: "Uploading Custom GGUF Models to Hugging Face"
 date: 2026-03-06
 categories: [general]
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # Uploading Custom GGUF Models to Hugging Face
+
+## Table of Contents
+
+- [Overview](#overview)
+
+## Overview
 
 This guide explains how to correctly upload custom `.gguf` models to a repository on Hugging Face using **Git LFS**.
 

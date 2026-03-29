@@ -5,22 +5,31 @@ date: 2025-08-31
 categories: [llm, software]
 ---
 > Date: {{ page.date | date: "%d.%m.%Y" }}
-  
+
 # SUNO Bark ROCm PyTorch Test
 
-{% include video.html 
+{% include video.html
     autoplay=false
-    src="/assets/articles/pytorch-rocm-bark-test/1.mp4" 
-    src_webm="/assets/articles/pytorch-rocm-bark-test/1.webm" 
+    src="/assets/articles/pytorch-rocm-bark-test/1.mp4"
+    src_webm="/assets/articles/pytorch-rocm-bark-test/1.webm"
 %}
 
-## Requirments 
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
+
+## Requirments
 - AMD Mi50/MI100 32Gb VRAM
-- Workstation 40 GB RAM, 500GB SSD, 750W Power supply 
+- Workstation 40 GB RAM, 500GB SSD, 750W Power supply
 - Ubuntu 22.04 LTS
 - Python 3.10
 
 > My test environment: HP Z440 + AMD Mi50
+
+## Instructions
 
 ## Test steps
 

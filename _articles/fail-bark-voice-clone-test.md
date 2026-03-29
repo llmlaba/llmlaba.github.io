@@ -5,25 +5,34 @@ date: 2025-08-31
 categories: [fail]
 ---
 > Date: {{ page.date | date: "%d.%m.%Y" }}
-  
+
 # SUNO Bark voice clone ROCm PyTorch Test
 
-{% include video.html 
+{% include video.html
     autoplay=false
-    src="/assets/articles/fail-bark-voice-clone-test/1.mp4" 
-    src_webm="/assets/articles/fail-bark-voice-clone-test/1.webm" 
+    src="/assets/articles/fail-bark-voice-clone-test/1.mp4"
+    src_webm="/assets/articles/fail-bark-voice-clone-test/1.webm"
 %}
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+
+## Overview
 
 ## NOTES
 - It works only with English language
 
-## Requirments 
+## Requirments
 - AMD Mi50/MI100 32Gb VRAM
-- Workstation 40 GB RAM, 500GB SSD, 750W Power supply 
+- Workstation 40 GB RAM, 500GB SSD, 750W Power supply
 - Ubuntu 22.04 LTS
 - Python 3.10
 
 > My test environment: HP Z440 + AMD Mi50
+
+## Instructions
 
 ## Test steps
 

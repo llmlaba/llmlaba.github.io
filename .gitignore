@@ -6,3 +6,19 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# npm
+node_modules/
+
+# Ruby bundler
+vendor/bundle/
+.bundle/
+
+# Generated assets (built by Webpack/Tailwind)
+assets/css/main.css
+assets/js/bundle.js
+
+# Jekyll build output
+_site/
+.jekyll-cache/
+node_modules

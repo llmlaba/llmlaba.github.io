@@ -1,54 +1,157 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: 'en-US' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }} — {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
+  {% seo %}
+  {% include head-custom.html %}
+</head>
+<body class="bg-surface-900 text-gray-100 min-h-screen">
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,maximum-scale=2">
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
+  <!-- ═══ TOPBAR ═══ -->
+  <header class="fixed top-0 left-0 right-0 z-50 h-12 bg-surface-900 border-b border-gray-800 flex items-center px-4 gap-3">
+    <button id="mobile-menu-btn"
+            class="lg:hidden flex items-center justify-center w-8 h-8 text-gray-400 hover:text-white transition-colors shrink-0"
+            aria-label="Menu" aria-expanded="false">
+      <svg width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true">
+        <rect y="0"  width="18" height="2" rx="1" fill="currentColor"/>
+        <rect y="6"  width="18" height="2" rx="1" fill="currentColor"/>
+        <rect y="12" width="18" height="2" rx="1" fill="currentColor"/>
+      </svg>
+    </button>
+    <a href="{{ '/' | absolute_url }}" class="text-white font-semibold text-sm tracking-tight hover:text-accent transition-colors">
+      {{ site.title }}
+    </a>
+    <div class="flex-1"></div>
+  </header>
 
-
-{% seo %}
-    {% include head-custom.html %}
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer" style="background-image: url('/assets/home.svg');">
-        <header class="inner">
-          {% if site.github.is_project_page %}
-            <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
-          {% endif %}
-
-          <h1 id="project_title"><a href="{{ '/' | absolute_url }}" style="color:white">{{ site.title | default: site.github.repository_name }}</a></a></h1>
-          <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
-
-          {% if site.show_downloads %}
-            <section id="downloads">
-              <a class="zip_download_link" href="{{ site.github.zip_url }}">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="{{ site.github.tar_url }}">Download this project as a tar.gz file</a>
-            </section>
-          {% endif %}
-        </header>
+  <!-- ═══ MOBILE DRAWER ═══ -->
+  <div id="mobile-drawer"
+       class="fixed top-12 left-0 z-40 w-72 max-h-[calc(100vh-48px)] overflow-y-auto
+              bg-surface-900 border-r border-b border-gray-800 shadow-2xl hidden lg:hidden">
+    <div class="py-4 px-4">
+      <p class="text-xs font-bold uppercase tracking-widest text-gray-600 mb-3">Discover</p>
+      <a class="home-cat-link active block py-1.5 text-sm" data-cat="all" href="#">All Articles</a>
+      <a class="home-cat-link block py-1.5 text-sm" data-cat="llm"      href="#">LLM / Software</a>
+      <a class="home-cat-link block py-1.5 text-sm" data-cat="hardware" href="#">GPU / Hardware</a>
+      <a class="home-cat-link block py-1.5 text-sm" data-cat="general"  href="#">Reference</a>
+      <a class="home-cat-link block py-1.5 text-sm" data-cat="project"  href="#">Projects</a>
+      <a class="home-cat-link block py-1.5 text-sm" data-cat="issue"    href="#">Issues</a>
+      <a class="home-cat-link block py-1.5 text-sm" data-cat="fail"     href="#">Fails</a>
     </div>
+  </div>
+  <div id="mobile-overlay" class="fixed inset-0 top-12 z-30 bg-black/50 hidden lg:hidden" aria-hidden="true"></div>
+
+  <!-- ═══ BODY ═══ -->
+  <div class="flex pt-12 min-h-[calc(100vh-48px)]">
+
+    <!-- HOME SIDEBAR -->
+    <nav class="hidden lg:flex flex-col fixed top-12 bottom-0 left-0
+                w-60 xl:w-64 shrink-0 z-20
+                bg-surface-900 border-r border-gray-800 overflow-y-auto py-6 px-4">
+      <p class="text-xs font-bold uppercase tracking-widest text-gray-600 mb-4 px-1">Discover</p>
+
+      <a class="home-cat-link active" data-cat="all" href="#">All Articles</a>
+
+      <p class="text-xs font-semibold uppercase tracking-widest text-gray-700 mt-5 mb-2 px-1">Software</p>
+      <a class="home-cat-link" data-cat="llm"     href="#">LLM / Software</a>
+      <a class="home-cat-link" data-cat="project" href="#">Projects</a>
+
+      <p class="text-xs font-semibold uppercase tracking-widest text-gray-700 mt-5 mb-2 px-1">Hardware</p>
+      <a class="home-cat-link" data-cat="hardware" href="#">GPU / Hardware</a>
+
+      <p class="text-xs font-semibold uppercase tracking-widest text-gray-700 mt-5 mb-2 px-1">Reference</p>
+      <a class="home-cat-link" data-cat="general" href="#">General Reference</a>
+      <a class="home-cat-link" data-cat="issue"   href="#">Known Issues</a>
+      <a class="home-cat-link" data-cat="fail"    href="#">Failed Tests</a>
+    </nav>
 
     <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        {{ content }}
-      </section>
-    </div>
+    <div class="flex-1 lg:ml-60 xl:ml-64 flex flex-col min-w-0">
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        {% if site.github.is_project_page %}
-        <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a> by {{ site.owner }}</p>
-      </footer>
-    </div>
-  </body>
+      <!-- Hero banner -->
+      <div class="relative h-40 border-b border-gray-800 overflow-hidden bg-surface-900">
+        <div class="absolute inset-0"
+             style="background-image: url('{{ '/assets/home.svg' | relative_url }}'); background-repeat: repeat-x; background-size: auto 100%;">
+        </div>
+      </div>
+
+      <!-- Category title + grid -->
+      <div class="px-6 lg:px-8 py-8">
+
+        <h1 id="home-category-title" class="text-2xl font-bold text-white mb-1">All Articles</h1>
+        <p class="text-sm text-gray-500 mb-8">{{ site.description }}</p>
+
+        <!-- Article cards grid -->
+        {% assign sorted_articles = site.articles | sort: 'date' | reverse %}
+
+        <div id="articles-grid" class="grid gap-4
+             grid-cols-1
+             md:grid-cols-2
+             xl:grid-cols-3">
+
+          {% for article in sorted_articles %}
+          {% unless article.categories contains 'draft' %}
+
+          {% assign cat_key = article.categories | first %}
+          {% assign cat_label = cat_key %}
+          {% if cat_key == 'llm' or cat_key == 'software' %}{% assign cat_label = 'LLM / Software' %}{% endif %}
+          {% if cat_key == 'gpu' or cat_key == 'hardware' %}{% assign cat_label = 'GPU / Hardware' %}{% endif %}
+          {% if cat_key == 'general' %}{% assign cat_label = 'Reference' %}{% endif %}
+          {% if cat_key == 'project' %}{% assign cat_label = 'Project' %}{% endif %}
+          {% if cat_key == 'issue' %}{% assign cat_label = 'Issue' %}{% endif %}
+          {% if cat_key == 'fail' %}{% assign cat_label = 'Fail' %}{% endif %}
+
+          <a href="{{ article.url | relative_url }}"
+             class="article-card"
+             data-categories="{{ article.categories | join: ' ' }}">
+
+            <!-- Thumbnail -->
+            <div class="article-card-thumb">
+              {% if article.images.size > 0 %}
+              <img src="{{ article.images[0] | relative_url }}"
+                   alt="{{ article.title }}"
+                   loading="lazy">
+              {% else %}
+              <div class="article-card-thumb-placeholder">
+                <img src="{{ '/assets/icon.png' | relative_url }}" alt="{{ site.title }}" class="w-10 h-10 opacity-20">
+              </div>
+              {% endif %}
+            </div>
+
+            <!-- Content -->
+            <div class="article-card-body">
+              <div class="article-card-top">
+                <span class="article-card-badge">{{ cat_label }}</span>
+              </div>
+              <h3 class="article-card-title">{{ article.title }}</h3>
+              <div class="article-card-meta">
+                <span class="article-card-date">{{ article.date | date: "%d.%m.%Y" }}</span>
+              </div>
+            </div>
+
+          </a>
+          {% endunless %}
+          {% endfor %}
+
+        </div><!-- /grid -->
+      </div><!-- /content -->
+    </div><!-- /main -->
+  </div><!-- /body -->
+
+  <!-- FOOTER -->
+  <footer class="lg:ml-60 xl:ml-64 border-t border-gray-800 px-6 py-4 text-xs text-gray-600 flex flex-wrap items-center gap-3">
+    <span>{{ site.title }}</span>
+    <span class="text-gray-800">&middot;</span>
+    <a href="https://pages.github.com" class="hover:text-gray-400 transition-colors">GitHub Pages</a>
+    <span class="text-gray-800">&middot;</span>
+    <span>{{ site.owner }}</span>
+  </footer>
+
+  <script src="{{ '/assets/js/bundle.js' | relative_url }}"></script>
+
+</body>
 </html>

@@ -7,11 +7,17 @@ categories: [general]
 images:
   - /assets/articles/general/PyTorch_logo.jpeg
 ---
-> Date: {{ page.date | date: "%d.%m.%Y" }}  
+> Date: {{ page.date | date: "%d.%m.%Y" }}
 
 # PyTorch dtype compatibility — quick cheat sheet
 
 {% include gallery.html images=page.images gallery_id=page.title %}
+
+## Table of Contents
+
+- [Overview](#overview)
+
+## Overview
 
 The table below shows, **dtype in API** that we can use in `torch_dtype=...` for PyTorch versions
 
