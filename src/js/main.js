@@ -2,6 +2,14 @@ import '../css/input.css';
 import GLightbox from 'glightbox';
 import 'glightbox/dist/css/glightbox.min.css';
 
+import Prism from 'prismjs';
+import 'prismjs/components/prism-python';
+import 'prismjs/components/prism-bash';
+import 'prismjs/components/prism-yaml';
+import 'prismjs/components/prism-json';
+import 'prismjs/components/prism-docker';
+import 'prismjs/components/prism-javascript';
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // ─── Gallery ─────────────────────────────────────────────────────────────
@@ -84,6 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.toggle('is-collapsed', collapsed);
     });
   });
+
+  // ─── Syntax highlighting ──────────────────────────────────────────────────
+  Prism.highlightAll();
 
   // ─── Tabs ─────────────────────────────────────────────────────────────────
   initTabs();
